@@ -446,6 +446,7 @@ message GetEstimationFeeResponse {
 message GetWalletBalanceRequest {
   Network NetworkIdentifier = 1;
   CurrencyIdentity CurrencyIdentifier = 2;
+  WalletIdentity WalletIdentifier = 3;
 }
 
 message GetWalletBalanceResponse {

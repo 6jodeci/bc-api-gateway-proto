@@ -3905,6 +3905,7 @@ type GetWalletBalanceRequest struct {
 	state              protoimpl.MessageState `protogen:"open.v1"`
 	NetworkIdentifier  Network                `protobuf:"varint,1,opt,name=NetworkIdentifier,proto3,enum=api.Network" json:"NetworkIdentifier,omitempty"`
 	CurrencyIdentifier *CurrencyIdentity      `protobuf:"bytes,2,opt,name=CurrencyIdentifier,proto3" json:"CurrencyIdentifier,omitempty"`
+	WalletIdentifier   *WalletIdentity        `protobuf:"bytes,3,opt,name=WalletIdentifier,proto3" json:"WalletIdentifier,omitempty"`
 	unknownFields      protoimpl.UnknownFields
 	sizeCache          protoimpl.SizeCache
 }
@@ -3949,6 +3950,13 @@ func (x *GetWalletBalanceRequest) GetNetworkIdentifier() Network {
 func (x *GetWalletBalanceRequest) GetCurrencyIdentifier() *CurrencyIdentity {
 	if x != nil {
 		return x.CurrencyIdentifier
+	}
+	return nil
+}
+
+func (x *GetWalletBalanceRequest) GetWalletIdentifier() *WalletIdentity {
+	if x != nil {
+		return x.WalletIdentifier
 	}
 	return nil
 }
@@ -4868,10 +4876,11 @@ const file_messages_proto_rawDesc = "" +
 	"\x18GetEstimationFeeResponse\x12:\n" +
 	"\x11NetworkIdentifier\x18\x01 \x01(\x0e2\f.api.NetworkR\x11NetworkIdentifier\x12T\n" +
 	"\x17EstimationFeeIdentifier\x18\x02 \x01(\v2\x1a.api.EstimationFeeIdentityR\x17EstimationFeeIdentifier\x12&\n" +
-	"\aFeeInfo\x18\x03 \x03(\v2\f.api.FeeInfoR\aFeeInfo\"\x9c\x01\n" +
+	"\aFeeInfo\x18\x03 \x03(\v2\f.api.FeeInfoR\aFeeInfo\"\xdd\x01\n" +
 	"\x17GetWalletBalanceRequest\x12:\n" +
 	"\x11NetworkIdentifier\x18\x01 \x01(\x0e2\f.api.NetworkR\x11NetworkIdentifier\x12E\n" +
-	"\x12CurrencyIdentifier\x18\x02 \x01(\v2\x15.api.CurrencyIdentityR\x12CurrencyIdentifier\"\xcd\x01\n" +
+	"\x12CurrencyIdentifier\x18\x02 \x01(\v2\x15.api.CurrencyIdentityR\x12CurrencyIdentifier\x12?\n" +
+	"\x10WalletIdentifier\x18\x03 \x01(\v2\x13.api.WalletIdentityR\x10WalletIdentifier\"\xcd\x01\n" +
 	"\x18GetWalletBalanceResponse\x12:\n" +
 	"\x11NetworkIdentifier\x18\x01 \x01(\x0e2\f.api.NetworkR\x11NetworkIdentifier\x12F\n" +
 	"\x13AddressToIdentifier\x18\x02 \x01(\v2\x14.api.AddressIdentityR\x13AddressToIdentifier\x12-\n" +
@@ -5177,32 +5186,33 @@ var file_messages_proto_depIdxs = []int32{
 	34,  // 99: api.GetEstimationFeeResponse.FeeInfo:type_name -> api.FeeInfo
 	0,   // 100: api.GetWalletBalanceRequest.NetworkIdentifier:type_name -> api.Network
 	12,  // 101: api.GetWalletBalanceRequest.CurrencyIdentifier:type_name -> api.CurrencyIdentity
-	0,   // 102: api.GetWalletBalanceResponse.NetworkIdentifier:type_name -> api.Network
-	18,  // 103: api.GetWalletBalanceResponse.AddressToIdentifier:type_name -> api.AddressIdentity
-	28,  // 104: api.GetWalletBalanceResponse.BalanceInfo:type_name -> api.Amount
-	0,   // 105: api.GetOrderInfoRequest.NetworkIdentifier:type_name -> api.Network
-	1,   // 106: api.GetOrderInfoRequest.ProviderIdentifier:type_name -> api.Provider
-	15,  // 107: api.GetOrderInfoRequest.OrderIdentifier:type_name -> api.OrderIdentify
-	13,  // 108: api.GetOrderInfoRequest.MerchantIdentifier:type_name -> api.MerchantIdentity
-	37,  // 109: api.GetOrderInfoResponse.OrderInfo:type_name -> api.OrderInfo
-	0,   // 110: api.GetOrderListByLimitAndOffsetRequest.NetworkIdentifier:type_name -> api.Network
-	1,   // 111: api.GetOrderListByLimitAndOffsetRequest.ProviderIdentifier:type_name -> api.Provider
-	13,  // 112: api.GetOrderListByLimitAndOffsetRequest.MerchantIdentifier:type_name -> api.MerchantIdentity
-	37,  // 113: api.GetOrderListByLimitAndOffsetResponse.OrderInfoList:type_name -> api.OrderInfo
-	29,  // 114: api.GetOrderListByTimeRangeRequest.TimeRange:type_name -> api.TimeRangeRequest
-	13,  // 115: api.GetOrderListByTimeRangeRequest.MerchantIdentifier:type_name -> api.MerchantIdentity
-	37,  // 116: api.GetOrderListByTimeRangeResponse.OrderInfoList:type_name -> api.OrderInfo
-	0,   // 117: api.GetEventListRequest.NetworkIdentifier:type_name -> api.Network
-	1,   // 118: api.GetEventListRequest.ProviderIdentifier:type_name -> api.Provider
-	15,  // 119: api.GetEventListRequest.OrderIdentifier:type_name -> api.OrderIdentify
-	13,  // 120: api.GetEventListRequest.MerchantIdentifier:type_name -> api.MerchantIdentity
-	38,  // 121: api.GetEventListResponse.EventInfoList:type_name -> api.EventInformation
-	31,  // 122: api.BcTxInfo.OperationsEntry.value:type_name -> api.OperationsList
-	123, // [123:123] is the sub-list for method output_type
-	123, // [123:123] is the sub-list for method input_type
-	123, // [123:123] is the sub-list for extension type_name
-	123, // [123:123] is the sub-list for extension extendee
-	0,   // [0:123] is the sub-list for field type_name
+	11,  // 102: api.GetWalletBalanceRequest.WalletIdentifier:type_name -> api.WalletIdentity
+	0,   // 103: api.GetWalletBalanceResponse.NetworkIdentifier:type_name -> api.Network
+	18,  // 104: api.GetWalletBalanceResponse.AddressToIdentifier:type_name -> api.AddressIdentity
+	28,  // 105: api.GetWalletBalanceResponse.BalanceInfo:type_name -> api.Amount
+	0,   // 106: api.GetOrderInfoRequest.NetworkIdentifier:type_name -> api.Network
+	1,   // 107: api.GetOrderInfoRequest.ProviderIdentifier:type_name -> api.Provider
+	15,  // 108: api.GetOrderInfoRequest.OrderIdentifier:type_name -> api.OrderIdentify
+	13,  // 109: api.GetOrderInfoRequest.MerchantIdentifier:type_name -> api.MerchantIdentity
+	37,  // 110: api.GetOrderInfoResponse.OrderInfo:type_name -> api.OrderInfo
+	0,   // 111: api.GetOrderListByLimitAndOffsetRequest.NetworkIdentifier:type_name -> api.Network
+	1,   // 112: api.GetOrderListByLimitAndOffsetRequest.ProviderIdentifier:type_name -> api.Provider
+	13,  // 113: api.GetOrderListByLimitAndOffsetRequest.MerchantIdentifier:type_name -> api.MerchantIdentity
+	37,  // 114: api.GetOrderListByLimitAndOffsetResponse.OrderInfoList:type_name -> api.OrderInfo
+	29,  // 115: api.GetOrderListByTimeRangeRequest.TimeRange:type_name -> api.TimeRangeRequest
+	13,  // 116: api.GetOrderListByTimeRangeRequest.MerchantIdentifier:type_name -> api.MerchantIdentity
+	37,  // 117: api.GetOrderListByTimeRangeResponse.OrderInfoList:type_name -> api.OrderInfo
+	0,   // 118: api.GetEventListRequest.NetworkIdentifier:type_name -> api.Network
+	1,   // 119: api.GetEventListRequest.ProviderIdentifier:type_name -> api.Provider
+	15,  // 120: api.GetEventListRequest.OrderIdentifier:type_name -> api.OrderIdentify
+	13,  // 121: api.GetEventListRequest.MerchantIdentifier:type_name -> api.MerchantIdentity
+	38,  // 122: api.GetEventListResponse.EventInfoList:type_name -> api.EventInformation
+	31,  // 123: api.BcTxInfo.OperationsEntry.value:type_name -> api.OperationsList
+	124, // [124:124] is the sub-list for method output_type
+	124, // [124:124] is the sub-list for method input_type
+	124, // [124:124] is the sub-list for extension type_name
+	124, // [124:124] is the sub-list for extension extendee
+	0,   // [0:124] is the sub-list for field type_name
 }
 
 func init() { file_messages_proto_init() }
