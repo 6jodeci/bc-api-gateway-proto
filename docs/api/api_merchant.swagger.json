@@ -54,6 +54,12 @@
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "WalletIdentifier.UUID",
+            "in": "query",
+            "required": false,
+            "type": "string"
           }
         ],
         "tags": [

@@ -1067,6 +1067,7 @@ Identity response messages
 | ----- | ---- | ----- | ----------- |
 | NetworkIdentifier | [Network](#api-Network) |  |  |
 | CurrencyIdentifier | [CurrencyIdentity](#api-CurrencyIdentity) |  |  |
+| WalletIdentifier | [WalletIdentity](#api-WalletIdentity) |  |  |
 
 
 
