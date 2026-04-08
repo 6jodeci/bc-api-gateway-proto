@@ -523,14 +523,6 @@
       ],
       "default": "PLACEHOLDER_BC_TX_STATUS"
     },
-    "apiBlockchainWalletIdentity": {
-      "type": "object",
-      "properties": {
-        "UUID": {
-          "type": "string"
-        }
-      }
-    },
     "apiCreateWithdrawOrderResponse": {
       "type": "object",
       "properties": {
