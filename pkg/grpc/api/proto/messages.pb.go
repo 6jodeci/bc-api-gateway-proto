@@ -1010,6 +1010,50 @@ func (x *BcTxIdentity) GetMeta() []byte {
 	return nil
 }
 
+type BlockchainWalletIdentity struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	UUID          string                 `protobuf:"bytes,1,opt,name=UUID,proto3" json:"UUID,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *BlockchainWalletIdentity) Reset() {
+	*x = BlockchainWalletIdentity{}
+	mi := &file_messages_proto_msgTypes[10]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *BlockchainWalletIdentity) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*BlockchainWalletIdentity) ProtoMessage() {}
+
+func (x *BlockchainWalletIdentity) ProtoReflect() protoreflect.Message {
+	mi := &file_messages_proto_msgTypes[10]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use BlockchainWalletIdentity.ProtoReflect.Descriptor instead.
+func (*BlockchainWalletIdentity) Descriptor() ([]byte, []int) {
+	return file_messages_proto_rawDescGZIP(), []int{10}
+}
+
+func (x *BlockchainWalletIdentity) GetUUID() string {
+	if x != nil {
+		return x.UUID
+	}
+	return ""
+}
+
 // Identity response messages
 type CurrencyIdentityResponse struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
@@ -1023,7 +1067,7 @@ type CurrencyIdentityResponse struct {
 
 func (x *CurrencyIdentityResponse) Reset() {
 	*x = CurrencyIdentityResponse{}
-	mi := &file_messages_proto_msgTypes[10]
+	mi := &file_messages_proto_msgTypes[11]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1035,7 +1079,7 @@ func (x *CurrencyIdentityResponse) String() string {
 func (*CurrencyIdentityResponse) ProtoMessage() {}
 
 func (x *CurrencyIdentityResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[10]
+	mi := &file_messages_proto_msgTypes[11]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1048,7 +1092,7 @@ func (x *CurrencyIdentityResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CurrencyIdentityResponse.ProtoReflect.Descriptor instead.
 func (*CurrencyIdentityResponse) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{10}
+	return file_messages_proto_rawDescGZIP(), []int{11}
 }
 
 func (x *CurrencyIdentityResponse) GetUUID() string {
@@ -1090,7 +1134,7 @@ type OrderIdentityResponse struct {
 
 func (x *OrderIdentityResponse) Reset() {
 	*x = OrderIdentityResponse{}
-	mi := &file_messages_proto_msgTypes[11]
+	mi := &file_messages_proto_msgTypes[12]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1102,7 +1146,7 @@ func (x *OrderIdentityResponse) String() string {
 func (*OrderIdentityResponse) ProtoMessage() {}
 
 func (x *OrderIdentityResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[11]
+	mi := &file_messages_proto_msgTypes[12]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1115,7 +1159,7 @@ func (x *OrderIdentityResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use OrderIdentityResponse.ProtoReflect.Descriptor instead.
 func (*OrderIdentityResponse) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{11}
+	return file_messages_proto_rawDescGZIP(), []int{12}
 }
 
 func (x *OrderIdentityResponse) GetUUID() string {
@@ -1153,7 +1197,7 @@ type AccountData struct {
 
 func (x *AccountData) Reset() {
 	*x = AccountData{}
-	mi := &file_messages_proto_msgTypes[12]
+	mi := &file_messages_proto_msgTypes[13]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1165,7 +1209,7 @@ func (x *AccountData) String() string {
 func (*AccountData) ProtoMessage() {}
 
 func (x *AccountData) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[12]
+	mi := &file_messages_proto_msgTypes[13]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1178,7 +1222,7 @@ func (x *AccountData) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use AccountData.ProtoReflect.Descriptor instead.
 func (*AccountData) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{12}
+	return file_messages_proto_rawDescGZIP(), []int{13}
 }
 
 func (x *AccountData) GetNetworkIdentifier() Network {
@@ -1228,7 +1272,7 @@ type WalletData struct {
 
 func (x *WalletData) Reset() {
 	*x = WalletData{}
-	mi := &file_messages_proto_msgTypes[13]
+	mi := &file_messages_proto_msgTypes[14]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1240,7 +1284,7 @@ func (x *WalletData) String() string {
 func (*WalletData) ProtoMessage() {}
 
 func (x *WalletData) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[13]
+	mi := &file_messages_proto_msgTypes[14]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1253,7 +1297,7 @@ func (x *WalletData) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use WalletData.ProtoReflect.Descriptor instead.
 func (*WalletData) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{13}
+	return file_messages_proto_rawDescGZIP(), []int{14}
 }
 
 func (x *WalletData) GetNetworkIdentifier() Network {
@@ -1296,7 +1340,7 @@ type CurrencyData struct {
 
 func (x *CurrencyData) Reset() {
 	*x = CurrencyData{}
-	mi := &file_messages_proto_msgTypes[14]
+	mi := &file_messages_proto_msgTypes[15]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1308,7 +1352,7 @@ func (x *CurrencyData) String() string {
 func (*CurrencyData) ProtoMessage() {}
 
 func (x *CurrencyData) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[14]
+	mi := &file_messages_proto_msgTypes[15]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1321,7 +1365,7 @@ func (x *CurrencyData) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CurrencyData.ProtoReflect.Descriptor instead.
 func (*CurrencyData) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{14}
+	return file_messages_proto_rawDescGZIP(), []int{15}
 }
 
 func (x *CurrencyData) GetNetworkIdentifier() Network {
@@ -1365,7 +1409,7 @@ type TokenData struct {
 
 func (x *TokenData) Reset() {
 	*x = TokenData{}
-	mi := &file_messages_proto_msgTypes[15]
+	mi := &file_messages_proto_msgTypes[16]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1377,7 +1421,7 @@ func (x *TokenData) String() string {
 func (*TokenData) ProtoMessage() {}
 
 func (x *TokenData) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[15]
+	mi := &file_messages_proto_msgTypes[16]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1390,7 +1434,7 @@ func (x *TokenData) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use TokenData.ProtoReflect.Descriptor instead.
 func (*TokenData) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{15}
+	return file_messages_proto_rawDescGZIP(), []int{16}
 }
 
 func (x *TokenData) GetNetworkIdentifier() Network {
@@ -1438,7 +1482,7 @@ type EstimatedTime struct {
 
 func (x *EstimatedTime) Reset() {
 	*x = EstimatedTime{}
-	mi := &file_messages_proto_msgTypes[16]
+	mi := &file_messages_proto_msgTypes[17]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1450,7 +1494,7 @@ func (x *EstimatedTime) String() string {
 func (*EstimatedTime) ProtoMessage() {}
 
 func (x *EstimatedTime) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[16]
+	mi := &file_messages_proto_msgTypes[17]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1463,7 +1507,7 @@ func (x *EstimatedTime) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use EstimatedTime.ProtoReflect.Descriptor instead.
 func (*EstimatedTime) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{16}
+	return file_messages_proto_rawDescGZIP(), []int{17}
 }
 
 func (x *EstimatedTime) GetMin() int64 {
@@ -1491,7 +1535,7 @@ type Currency struct {
 
 func (x *Currency) Reset() {
 	*x = Currency{}
-	mi := &file_messages_proto_msgTypes[17]
+	mi := &file_messages_proto_msgTypes[18]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1503,7 +1547,7 @@ func (x *Currency) String() string {
 func (*Currency) ProtoMessage() {}
 
 func (x *Currency) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[17]
+	mi := &file_messages_proto_msgTypes[18]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1516,7 +1560,7 @@ func (x *Currency) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Currency.ProtoReflect.Descriptor instead.
 func (*Currency) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{17}
+	return file_messages_proto_rawDescGZIP(), []int{18}
 }
 
 func (x *Currency) GetSymbol() string {
@@ -1551,7 +1595,7 @@ type Amount struct {
 
 func (x *Amount) Reset() {
 	*x = Amount{}
-	mi := &file_messages_proto_msgTypes[18]
+	mi := &file_messages_proto_msgTypes[19]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1563,7 +1607,7 @@ func (x *Amount) String() string {
 func (*Amount) ProtoMessage() {}
 
 func (x *Amount) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[18]
+	mi := &file_messages_proto_msgTypes[19]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1576,7 +1620,7 @@ func (x *Amount) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Amount.ProtoReflect.Descriptor instead.
 func (*Amount) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{18}
+	return file_messages_proto_rawDescGZIP(), []int{19}
 }
 
 func (x *Amount) GetValue() uint64 {
@@ -1610,7 +1654,7 @@ type TimeRangeRequest struct {
 
 func (x *TimeRangeRequest) Reset() {
 	*x = TimeRangeRequest{}
-	mi := &file_messages_proto_msgTypes[19]
+	mi := &file_messages_proto_msgTypes[20]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1622,7 +1666,7 @@ func (x *TimeRangeRequest) String() string {
 func (*TimeRangeRequest) ProtoMessage() {}
 
 func (x *TimeRangeRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[19]
+	mi := &file_messages_proto_msgTypes[20]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1635,7 +1679,7 @@ func (x *TimeRangeRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use TimeRangeRequest.ProtoReflect.Descriptor instead.
 func (*TimeRangeRequest) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{19}
+	return file_messages_proto_rawDescGZIP(), []int{20}
 }
 
 func (x *TimeRangeRequest) GetStart() uint64 {
@@ -1665,7 +1709,7 @@ type BcTxOperation struct {
 
 func (x *BcTxOperation) Reset() {
 	*x = BcTxOperation{}
-	mi := &file_messages_proto_msgTypes[20]
+	mi := &file_messages_proto_msgTypes[21]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1677,7 +1721,7 @@ func (x *BcTxOperation) String() string {
 func (*BcTxOperation) ProtoMessage() {}
 
 func (x *BcTxOperation) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[20]
+	mi := &file_messages_proto_msgTypes[21]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1690,7 +1734,7 @@ func (x *BcTxOperation) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use BcTxOperation.ProtoReflect.Descriptor instead.
 func (*BcTxOperation) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{20}
+	return file_messages_proto_rawDescGZIP(), []int{21}
 }
 
 func (x *BcTxOperation) GetIndex() uint32 {
@@ -1730,7 +1774,7 @@ type OperationsList struct {
 
 func (x *OperationsList) Reset() {
 	*x = OperationsList{}
-	mi := &file_messages_proto_msgTypes[21]
+	mi := &file_messages_proto_msgTypes[22]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1742,7 +1786,7 @@ func (x *OperationsList) String() string {
 func (*OperationsList) ProtoMessage() {}
 
 func (x *OperationsList) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[21]
+	mi := &file_messages_proto_msgTypes[22]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1755,7 +1799,7 @@ func (x *OperationsList) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use OperationsList.ProtoReflect.Descriptor instead.
 func (*OperationsList) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{21}
+	return file_messages_proto_rawDescGZIP(), []int{22}
 }
 
 func (x *OperationsList) GetOperations() []*BcTxOperation {
@@ -1778,7 +1822,7 @@ type AccountInfo struct {
 
 func (x *AccountInfo) Reset() {
 	*x = AccountInfo{}
-	mi := &file_messages_proto_msgTypes[22]
+	mi := &file_messages_proto_msgTypes[23]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1790,7 +1834,7 @@ func (x *AccountInfo) String() string {
 func (*AccountInfo) ProtoMessage() {}
 
 func (x *AccountInfo) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[22]
+	mi := &file_messages_proto_msgTypes[23]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1803,7 +1847,7 @@ func (x *AccountInfo) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use AccountInfo.ProtoReflect.Descriptor instead.
 func (*AccountInfo) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{22}
+	return file_messages_proto_rawDescGZIP(), []int{23}
 }
 
 func (x *AccountInfo) GetAccountIdentity() *AccountIdentity {
@@ -1845,7 +1889,7 @@ type CurrencyInfo struct {
 
 func (x *CurrencyInfo) Reset() {
 	*x = CurrencyInfo{}
-	mi := &file_messages_proto_msgTypes[23]
+	mi := &file_messages_proto_msgTypes[24]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1857,7 +1901,7 @@ func (x *CurrencyInfo) String() string {
 func (*CurrencyInfo) ProtoMessage() {}
 
 func (x *CurrencyInfo) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[23]
+	mi := &file_messages_proto_msgTypes[24]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1870,7 +1914,7 @@ func (x *CurrencyInfo) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CurrencyInfo.ProtoReflect.Descriptor instead.
 func (*CurrencyInfo) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{23}
+	return file_messages_proto_rawDescGZIP(), []int{24}
 }
 
 func (x *CurrencyInfo) GetCurrencyIdentity() *CurrencyIdentity {
@@ -1907,7 +1951,7 @@ type FeeInfo struct {
 
 func (x *FeeInfo) Reset() {
 	*x = FeeInfo{}
-	mi := &file_messages_proto_msgTypes[24]
+	mi := &file_messages_proto_msgTypes[25]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1919,7 +1963,7 @@ func (x *FeeInfo) String() string {
 func (*FeeInfo) ProtoMessage() {}
 
 func (x *FeeInfo) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[24]
+	mi := &file_messages_proto_msgTypes[25]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1932,7 +1976,7 @@ func (x *FeeInfo) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use FeeInfo.ProtoReflect.Descriptor instead.
 func (*FeeInfo) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{24}
+	return file_messages_proto_rawDescGZIP(), []int{25}
 }
 
 func (x *FeeInfo) GetFeeInfoIdentifier() string {
@@ -1982,7 +2026,7 @@ type WalletInfo struct {
 
 func (x *WalletInfo) Reset() {
 	*x = WalletInfo{}
-	mi := &file_messages_proto_msgTypes[25]
+	mi := &file_messages_proto_msgTypes[26]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1994,7 +2038,7 @@ func (x *WalletInfo) String() string {
 func (*WalletInfo) ProtoMessage() {}
 
 func (x *WalletInfo) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[25]
+	mi := &file_messages_proto_msgTypes[26]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2007,7 +2051,7 @@ func (x *WalletInfo) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use WalletInfo.ProtoReflect.Descriptor instead.
 func (*WalletInfo) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{25}
+	return file_messages_proto_rawDescGZIP(), []int{26}
 }
 
 func (x *WalletInfo) GetWalletIdentity() *WalletIdentity {
@@ -2055,7 +2099,7 @@ type BcTxInfo struct {
 
 func (x *BcTxInfo) Reset() {
 	*x = BcTxInfo{}
-	mi := &file_messages_proto_msgTypes[26]
+	mi := &file_messages_proto_msgTypes[27]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2067,7 +2111,7 @@ func (x *BcTxInfo) String() string {
 func (*BcTxInfo) ProtoMessage() {}
 
 func (x *BcTxInfo) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[26]
+	mi := &file_messages_proto_msgTypes[27]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2080,7 +2124,7 @@ func (x *BcTxInfo) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use BcTxInfo.ProtoReflect.Descriptor instead.
 func (*BcTxInfo) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{26}
+	return file_messages_proto_rawDescGZIP(), []int{27}
 }
 
 func (x *BcTxInfo) GetNetwork() Network {
@@ -2169,7 +2213,7 @@ type OrderInfo struct {
 
 func (x *OrderInfo) Reset() {
 	*x = OrderInfo{}
-	mi := &file_messages_proto_msgTypes[27]
+	mi := &file_messages_proto_msgTypes[28]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2181,7 +2225,7 @@ func (x *OrderInfo) String() string {
 func (*OrderInfo) ProtoMessage() {}
 
 func (x *OrderInfo) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[27]
+	mi := &file_messages_proto_msgTypes[28]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2194,7 +2238,7 @@ func (x *OrderInfo) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use OrderInfo.ProtoReflect.Descriptor instead.
 func (*OrderInfo) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{27}
+	return file_messages_proto_rawDescGZIP(), []int{28}
 }
 
 func (x *OrderInfo) GetNetwork() Network {
@@ -2318,7 +2362,7 @@ type EventInformation struct {
 
 func (x *EventInformation) Reset() {
 	*x = EventInformation{}
-	mi := &file_messages_proto_msgTypes[28]
+	mi := &file_messages_proto_msgTypes[29]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2330,7 +2374,7 @@ func (x *EventInformation) String() string {
 func (*EventInformation) ProtoMessage() {}
 
 func (x *EventInformation) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[28]
+	mi := &file_messages_proto_msgTypes[29]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2343,7 +2387,7 @@ func (x *EventInformation) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use EventInformation.ProtoReflect.Descriptor instead.
 func (*EventInformation) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{28}
+	return file_messages_proto_rawDescGZIP(), []int{29}
 }
 
 func (x *EventInformation) GetNetwork() Network {
@@ -2411,7 +2455,7 @@ type CreateMerchantRequest struct {
 
 func (x *CreateMerchantRequest) Reset() {
 	*x = CreateMerchantRequest{}
-	mi := &file_messages_proto_msgTypes[29]
+	mi := &file_messages_proto_msgTypes[30]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2423,7 +2467,7 @@ func (x *CreateMerchantRequest) String() string {
 func (*CreateMerchantRequest) ProtoMessage() {}
 
 func (x *CreateMerchantRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[29]
+	mi := &file_messages_proto_msgTypes[30]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2436,7 +2480,7 @@ func (x *CreateMerchantRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CreateMerchantRequest.ProtoReflect.Descriptor instead.
 func (*CreateMerchantRequest) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{29}
+	return file_messages_proto_rawDescGZIP(), []int{30}
 }
 
 type CreateMerchantResponse struct {
@@ -2447,7 +2491,7 @@ type CreateMerchantResponse struct {
 
 func (x *CreateMerchantResponse) Reset() {
 	*x = CreateMerchantResponse{}
-	mi := &file_messages_proto_msgTypes[30]
+	mi := &file_messages_proto_msgTypes[31]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2459,7 +2503,7 @@ func (x *CreateMerchantResponse) String() string {
 func (*CreateMerchantResponse) ProtoMessage() {}
 
 func (x *CreateMerchantResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[30]
+	mi := &file_messages_proto_msgTypes[31]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2472,7 +2516,7 @@ func (x *CreateMerchantResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CreateMerchantResponse.ProtoReflect.Descriptor instead.
 func (*CreateMerchantResponse) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{30}
+	return file_messages_proto_rawDescGZIP(), []int{31}
 }
 
 type CreateWalletRequest struct {
@@ -2487,7 +2531,7 @@ type CreateWalletRequest struct {
 
 func (x *CreateWalletRequest) Reset() {
 	*x = CreateWalletRequest{}
-	mi := &file_messages_proto_msgTypes[31]
+	mi := &file_messages_proto_msgTypes[32]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2499,7 +2543,7 @@ func (x *CreateWalletRequest) String() string {
 func (*CreateWalletRequest) ProtoMessage() {}
 
 func (x *CreateWalletRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[31]
+	mi := &file_messages_proto_msgTypes[32]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2512,7 +2556,7 @@ func (x *CreateWalletRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CreateWalletRequest.ProtoReflect.Descriptor instead.
 func (*CreateWalletRequest) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{31}
+	return file_messages_proto_rawDescGZIP(), []int{32}
 }
 
 func (x *CreateWalletRequest) GetNetworkIdentifier() Network {
@@ -2557,7 +2601,7 @@ type CreateWalletResponse struct {
 
 func (x *CreateWalletResponse) Reset() {
 	*x = CreateWalletResponse{}
-	mi := &file_messages_proto_msgTypes[32]
+	mi := &file_messages_proto_msgTypes[33]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2569,7 +2613,7 @@ func (x *CreateWalletResponse) String() string {
 func (*CreateWalletResponse) ProtoMessage() {}
 
 func (x *CreateWalletResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[32]
+	mi := &file_messages_proto_msgTypes[33]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2582,7 +2626,7 @@ func (x *CreateWalletResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CreateWalletResponse.ProtoReflect.Descriptor instead.
 func (*CreateWalletResponse) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{32}
+	return file_messages_proto_rawDescGZIP(), []int{33}
 }
 
 func (x *CreateWalletResponse) GetNetworkIdentifier() Network {
@@ -2637,7 +2681,7 @@ type ChangeWalletStatusRequest struct {
 
 func (x *ChangeWalletStatusRequest) Reset() {
 	*x = ChangeWalletStatusRequest{}
-	mi := &file_messages_proto_msgTypes[33]
+	mi := &file_messages_proto_msgTypes[34]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2649,7 +2693,7 @@ func (x *ChangeWalletStatusRequest) String() string {
 func (*ChangeWalletStatusRequest) ProtoMessage() {}
 
 func (x *ChangeWalletStatusRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[33]
+	mi := &file_messages_proto_msgTypes[34]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2662,7 +2706,7 @@ func (x *ChangeWalletStatusRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ChangeWalletStatusRequest.ProtoReflect.Descriptor instead.
 func (*ChangeWalletStatusRequest) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{33}
+	return file_messages_proto_rawDescGZIP(), []int{34}
 }
 
 func (x *ChangeWalletStatusRequest) GetWalletIdentifier() *WalletIdentity {
@@ -2689,7 +2733,7 @@ type ChangeWalletStatusResponse struct {
 
 func (x *ChangeWalletStatusResponse) Reset() {
 	*x = ChangeWalletStatusResponse{}
-	mi := &file_messages_proto_msgTypes[34]
+	mi := &file_messages_proto_msgTypes[35]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2701,7 +2745,7 @@ func (x *ChangeWalletStatusResponse) String() string {
 func (*ChangeWalletStatusResponse) ProtoMessage() {}
 
 func (x *ChangeWalletStatusResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[34]
+	mi := &file_messages_proto_msgTypes[35]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2714,7 +2758,7 @@ func (x *ChangeWalletStatusResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ChangeWalletStatusResponse.ProtoReflect.Descriptor instead.
 func (*ChangeWalletStatusResponse) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{34}
+	return file_messages_proto_rawDescGZIP(), []int{35}
 }
 
 func (x *ChangeWalletStatusResponse) GetWalletIdentifier() *WalletIdentity {
@@ -2741,7 +2785,7 @@ type ChangeAccountStatusRequest struct {
 
 func (x *ChangeAccountStatusRequest) Reset() {
 	*x = ChangeAccountStatusRequest{}
-	mi := &file_messages_proto_msgTypes[35]
+	mi := &file_messages_proto_msgTypes[36]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2753,7 +2797,7 @@ func (x *ChangeAccountStatusRequest) String() string {
 func (*ChangeAccountStatusRequest) ProtoMessage() {}
 
 func (x *ChangeAccountStatusRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[35]
+	mi := &file_messages_proto_msgTypes[36]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2766,7 +2810,7 @@ func (x *ChangeAccountStatusRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ChangeAccountStatusRequest.ProtoReflect.Descriptor instead.
 func (*ChangeAccountStatusRequest) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{35}
+	return file_messages_proto_rawDescGZIP(), []int{36}
 }
 
 func (x *ChangeAccountStatusRequest) GetAccountIdentifier() *AccountIdentity {
@@ -2793,7 +2837,7 @@ type ChangeAccountStatusResponse struct {
 
 func (x *ChangeAccountStatusResponse) Reset() {
 	*x = ChangeAccountStatusResponse{}
-	mi := &file_messages_proto_msgTypes[36]
+	mi := &file_messages_proto_msgTypes[37]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2805,7 +2849,7 @@ func (x *ChangeAccountStatusResponse) String() string {
 func (*ChangeAccountStatusResponse) ProtoMessage() {}
 
 func (x *ChangeAccountStatusResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[36]
+	mi := &file_messages_proto_msgTypes[37]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2818,7 +2862,7 @@ func (x *ChangeAccountStatusResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ChangeAccountStatusResponse.ProtoReflect.Descriptor instead.
 func (*ChangeAccountStatusResponse) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{36}
+	return file_messages_proto_rawDescGZIP(), []int{37}
 }
 
 func (x *ChangeAccountStatusResponse) GetAccountIdentifier() *AccountIdentity {
@@ -2843,7 +2887,7 @@ type CreateAccountRequest struct {
 
 func (x *CreateAccountRequest) Reset() {
 	*x = CreateAccountRequest{}
-	mi := &file_messages_proto_msgTypes[37]
+	mi := &file_messages_proto_msgTypes[38]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2855,7 +2899,7 @@ func (x *CreateAccountRequest) String() string {
 func (*CreateAccountRequest) ProtoMessage() {}
 
 func (x *CreateAccountRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[37]
+	mi := &file_messages_proto_msgTypes[38]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2868,7 +2912,7 @@ func (x *CreateAccountRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CreateAccountRequest.ProtoReflect.Descriptor instead.
 func (*CreateAccountRequest) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{37}
+	return file_messages_proto_rawDescGZIP(), []int{38}
 }
 
 type CreateAccountResponse struct {
@@ -2879,7 +2923,7 @@ type CreateAccountResponse struct {
 
 func (x *CreateAccountResponse) Reset() {
 	*x = CreateAccountResponse{}
-	mi := &file_messages_proto_msgTypes[38]
+	mi := &file_messages_proto_msgTypes[39]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2891,7 +2935,7 @@ func (x *CreateAccountResponse) String() string {
 func (*CreateAccountResponse) ProtoMessage() {}
 
 func (x *CreateAccountResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[38]
+	mi := &file_messages_proto_msgTypes[39]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2904,7 +2948,7 @@ func (x *CreateAccountResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CreateAccountResponse.ProtoReflect.Descriptor instead.
 func (*CreateAccountResponse) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{38}
+	return file_messages_proto_rawDescGZIP(), []int{39}
 }
 
 type CreateCurrencyRequest struct {
@@ -2926,7 +2970,7 @@ type CreateCurrencyRequest struct {
 
 func (x *CreateCurrencyRequest) Reset() {
 	*x = CreateCurrencyRequest{}
-	mi := &file_messages_proto_msgTypes[39]
+	mi := &file_messages_proto_msgTypes[40]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2938,7 +2982,7 @@ func (x *CreateCurrencyRequest) String() string {
 func (*CreateCurrencyRequest) ProtoMessage() {}
 
 func (x *CreateCurrencyRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[39]
+	mi := &file_messages_proto_msgTypes[40]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2951,7 +2995,7 @@ func (x *CreateCurrencyRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CreateCurrencyRequest.ProtoReflect.Descriptor instead.
 func (*CreateCurrencyRequest) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{39}
+	return file_messages_proto_rawDescGZIP(), []int{40}
 }
 
 func (x *CreateCurrencyRequest) GetNetworkIdentifier() Network {
@@ -3042,7 +3086,7 @@ type CreateCurrencyResponse struct {
 
 func (x *CreateCurrencyResponse) Reset() {
 	*x = CreateCurrencyResponse{}
-	mi := &file_messages_proto_msgTypes[40]
+	mi := &file_messages_proto_msgTypes[41]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -3054,7 +3098,7 @@ func (x *CreateCurrencyResponse) String() string {
 func (*CreateCurrencyResponse) ProtoMessage() {}
 
 func (x *CreateCurrencyResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[40]
+	mi := &file_messages_proto_msgTypes[41]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3067,7 +3111,7 @@ func (x *CreateCurrencyResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CreateCurrencyResponse.ProtoReflect.Descriptor instead.
 func (*CreateCurrencyResponse) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{40}
+	return file_messages_proto_rawDescGZIP(), []int{41}
 }
 
 func (x *CreateCurrencyResponse) GetNetworkIdentifier() Network {
@@ -3092,22 +3136,23 @@ func (x *CreateCurrencyResponse) GetCurrencyInfo() *CurrencyInfo {
 }
 
 type CreateWithdrawOrderRequest struct {
-	state                   protoimpl.MessageState `protogen:"open.v1"`
-	NetworkIdentifier       Network                `protobuf:"varint,1,opt,name=NetworkIdentifier,proto3,enum=api.Network" json:"NetworkIdentifier,omitempty"`
-	CurrencyIdentifier      *CurrencyIdentity      `protobuf:"bytes,2,opt,name=CurrencyIdentifier,proto3" json:"CurrencyIdentifier,omitempty"`
-	EstimateFeeIdentifier   *EstimationFeeIdentity `protobuf:"bytes,3,opt,name=EstimateFeeIdentifier,proto3" json:"EstimateFeeIdentifier,omitempty"`
-	AddressToIdentifier     *AddressIdentity       `protobuf:"bytes,4,opt,name=AddressToIdentifier,proto3" json:"AddressToIdentifier,omitempty"`
-	ExternalOrderIdentifier string                 `protobuf:"bytes,5,opt,name=ExternalOrderIdentifier,proto3" json:"ExternalOrderIdentifier,omitempty"`
-	Amount                  uint64                 `protobuf:"varint,6,opt,name=Amount,proto3" json:"Amount,omitempty"`
-	ConfirmationsCount      uint32                 `protobuf:"varint,7,opt,name=ConfirmationsCount,proto3" json:"ConfirmationsCount,omitempty"`
-	CallbackURL             string                 `protobuf:"bytes,8,opt,name=CallbackURL,proto3" json:"CallbackURL,omitempty"`
-	unknownFields           protoimpl.UnknownFields
-	sizeCache               protoimpl.SizeCache
+	state                      protoimpl.MessageState    `protogen:"open.v1"`
+	NetworkIdentifier          Network                   `protobuf:"varint,1,opt,name=NetworkIdentifier,proto3,enum=api.Network" json:"NetworkIdentifier,omitempty"`
+	CurrencyIdentifier         *CurrencyIdentity         `protobuf:"bytes,2,opt,name=CurrencyIdentifier,proto3" json:"CurrencyIdentifier,omitempty"`
+	EstimateFeeIdentifier      *EstimationFeeIdentity    `protobuf:"bytes,3,opt,name=EstimateFeeIdentifier,proto3" json:"EstimateFeeIdentifier,omitempty"`
+	AddressToIdentifier        *AddressIdentity          `protobuf:"bytes,4,opt,name=AddressToIdentifier,proto3" json:"AddressToIdentifier,omitempty"`
+	ExternalOrderIdentifier    string                    `protobuf:"bytes,5,opt,name=ExternalOrderIdentifier,proto3" json:"ExternalOrderIdentifier,omitempty"`
+	Amount                     uint64                    `protobuf:"varint,6,opt,name=Amount,proto3" json:"Amount,omitempty"`
+	ConfirmationsCount         uint32                    `protobuf:"varint,7,opt,name=ConfirmationsCount,proto3" json:"ConfirmationsCount,omitempty"`
+	CallbackURL                string                    `protobuf:"bytes,8,opt,name=CallbackURL,proto3" json:"CallbackURL,omitempty"`
+	BlockchainWalletIdentifier *BlockchainWalletIdentity `protobuf:"bytes,9,opt,name=BlockchainWalletIdentifier,proto3" json:"BlockchainWalletIdentifier,omitempty"`
+	unknownFields              protoimpl.UnknownFields
+	sizeCache                  protoimpl.SizeCache
 }
 
 func (x *CreateWithdrawOrderRequest) Reset() {
 	*x = CreateWithdrawOrderRequest{}
-	mi := &file_messages_proto_msgTypes[41]
+	mi := &file_messages_proto_msgTypes[42]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -3119,7 +3164,7 @@ func (x *CreateWithdrawOrderRequest) String() string {
 func (*CreateWithdrawOrderRequest) ProtoMessage() {}
 
 func (x *CreateWithdrawOrderRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[41]
+	mi := &file_messages_proto_msgTypes[42]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3132,7 +3177,7 @@ func (x *CreateWithdrawOrderRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CreateWithdrawOrderRequest.ProtoReflect.Descriptor instead.
 func (*CreateWithdrawOrderRequest) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{41}
+	return file_messages_proto_rawDescGZIP(), []int{42}
 }
 
 func (x *CreateWithdrawOrderRequest) GetNetworkIdentifier() Network {
@@ -3191,6 +3236,13 @@ func (x *CreateWithdrawOrderRequest) GetCallbackURL() string {
 	return ""
 }
 
+func (x *CreateWithdrawOrderRequest) GetBlockchainWalletIdentifier() *BlockchainWalletIdentity {
+	if x != nil {
+		return x.BlockchainWalletIdentifier
+	}
+	return nil
+}
+
 type CreateWithdrawOrderResponse struct {
 	state           protoimpl.MessageState `protogen:"open.v1"`
 	OrderIdentifier *OrderIdentify         `protobuf:"bytes,1,opt,name=OrderIdentifier,proto3" json:"OrderIdentifier,omitempty"`
@@ -3200,7 +3252,7 @@ type CreateWithdrawOrderResponse struct {
 
 func (x *CreateWithdrawOrderResponse) Reset() {
 	*x = CreateWithdrawOrderResponse{}
-	mi := &file_messages_proto_msgTypes[42]
+	mi := &file_messages_proto_msgTypes[43]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -3212,7 +3264,7 @@ func (x *CreateWithdrawOrderResponse) String() string {
 func (*CreateWithdrawOrderResponse) ProtoMessage() {}
 
 func (x *CreateWithdrawOrderResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[42]
+	mi := &file_messages_proto_msgTypes[43]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3225,7 +3277,7 @@ func (x *CreateWithdrawOrderResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CreateWithdrawOrderResponse.ProtoReflect.Descriptor instead.
 func (*CreateWithdrawOrderResponse) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{42}
+	return file_messages_proto_rawDescGZIP(), []int{43}
 }
 
 func (x *CreateWithdrawOrderResponse) GetOrderIdentifier() *OrderIdentify {
@@ -3248,7 +3300,7 @@ type AddAccountCurrencyRequest struct {
 
 func (x *AddAccountCurrencyRequest) Reset() {
 	*x = AddAccountCurrencyRequest{}
-	mi := &file_messages_proto_msgTypes[43]
+	mi := &file_messages_proto_msgTypes[44]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -3260,7 +3312,7 @@ func (x *AddAccountCurrencyRequest) String() string {
 func (*AddAccountCurrencyRequest) ProtoMessage() {}
 
 func (x *AddAccountCurrencyRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[43]
+	mi := &file_messages_proto_msgTypes[44]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3273,7 +3325,7 @@ func (x *AddAccountCurrencyRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use AddAccountCurrencyRequest.ProtoReflect.Descriptor instead.
 func (*AddAccountCurrencyRequest) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{43}
+	return file_messages_proto_rawDescGZIP(), []int{44}
 }
 
 func (x *AddAccountCurrencyRequest) GetNetworkIdentifier() Network {
@@ -3317,7 +3369,7 @@ type AddAccountCurrencyResponse struct {
 
 func (x *AddAccountCurrencyResponse) Reset() {
 	*x = AddAccountCurrencyResponse{}
-	mi := &file_messages_proto_msgTypes[44]
+	mi := &file_messages_proto_msgTypes[45]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -3329,7 +3381,7 @@ func (x *AddAccountCurrencyResponse) String() string {
 func (*AddAccountCurrencyResponse) ProtoMessage() {}
 
 func (x *AddAccountCurrencyResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[44]
+	mi := &file_messages_proto_msgTypes[45]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3342,7 +3394,7 @@ func (x *AddAccountCurrencyResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use AddAccountCurrencyResponse.ProtoReflect.Descriptor instead.
 func (*AddAccountCurrencyResponse) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{44}
+	return file_messages_proto_rawDescGZIP(), []int{45}
 }
 
 func (x *AddAccountCurrencyResponse) GetNetworkIdentifier() Network {
@@ -3392,7 +3444,7 @@ type GetWalletsRequest struct {
 
 func (x *GetWalletsRequest) Reset() {
 	*x = GetWalletsRequest{}
-	mi := &file_messages_proto_msgTypes[45]
+	mi := &file_messages_proto_msgTypes[46]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -3404,7 +3456,7 @@ func (x *GetWalletsRequest) String() string {
 func (*GetWalletsRequest) ProtoMessage() {}
 
 func (x *GetWalletsRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[45]
+	mi := &file_messages_proto_msgTypes[46]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3417,7 +3469,7 @@ func (x *GetWalletsRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetWalletsRequest.ProtoReflect.Descriptor instead.
 func (*GetWalletsRequest) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{45}
+	return file_messages_proto_rawDescGZIP(), []int{46}
 }
 
 func (x *GetWalletsRequest) GetNetworkIdentifier() Network {
@@ -3451,7 +3503,7 @@ type GetWalletsResponse struct {
 
 func (x *GetWalletsResponse) Reset() {
 	*x = GetWalletsResponse{}
-	mi := &file_messages_proto_msgTypes[46]
+	mi := &file_messages_proto_msgTypes[47]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -3463,7 +3515,7 @@ func (x *GetWalletsResponse) String() string {
 func (*GetWalletsResponse) ProtoMessage() {}
 
 func (x *GetWalletsResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[46]
+	mi := &file_messages_proto_msgTypes[47]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3476,7 +3528,7 @@ func (x *GetWalletsResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetWalletsResponse.ProtoReflect.Descriptor instead.
 func (*GetWalletsResponse) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{46}
+	return file_messages_proto_rawDescGZIP(), []int{47}
 }
 
 func (x *GetWalletsResponse) GetWalletCount() uint32 {
@@ -3501,7 +3553,7 @@ type GetCurrenciesRequest struct {
 
 func (x *GetCurrenciesRequest) Reset() {
 	*x = GetCurrenciesRequest{}
-	mi := &file_messages_proto_msgTypes[47]
+	mi := &file_messages_proto_msgTypes[48]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -3513,7 +3565,7 @@ func (x *GetCurrenciesRequest) String() string {
 func (*GetCurrenciesRequest) ProtoMessage() {}
 
 func (x *GetCurrenciesRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[47]
+	mi := &file_messages_proto_msgTypes[48]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3526,7 +3578,7 @@ func (x *GetCurrenciesRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetCurrenciesRequest.ProtoReflect.Descriptor instead.
 func (*GetCurrenciesRequest) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{47}
+	return file_messages_proto_rawDescGZIP(), []int{48}
 }
 
 type GetCurrenciesResponse struct {
@@ -3539,7 +3591,7 @@ type GetCurrenciesResponse struct {
 
 func (x *GetCurrenciesResponse) Reset() {
 	*x = GetCurrenciesResponse{}
-	mi := &file_messages_proto_msgTypes[48]
+	mi := &file_messages_proto_msgTypes[49]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -3551,7 +3603,7 @@ func (x *GetCurrenciesResponse) String() string {
 func (*GetCurrenciesResponse) ProtoMessage() {}
 
 func (x *GetCurrenciesResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[48]
+	mi := &file_messages_proto_msgTypes[49]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3564,7 +3616,7 @@ func (x *GetCurrenciesResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetCurrenciesResponse.ProtoReflect.Descriptor instead.
 func (*GetCurrenciesResponse) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{48}
+	return file_messages_proto_rawDescGZIP(), []int{49}
 }
 
 func (x *GetCurrenciesResponse) GetCurrencyCount() uint64 {
@@ -3589,7 +3641,7 @@ type GetAllWalletsRequest struct {
 
 func (x *GetAllWalletsRequest) Reset() {
 	*x = GetAllWalletsRequest{}
-	mi := &file_messages_proto_msgTypes[49]
+	mi := &file_messages_proto_msgTypes[50]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -3601,7 +3653,7 @@ func (x *GetAllWalletsRequest) String() string {
 func (*GetAllWalletsRequest) ProtoMessage() {}
 
 func (x *GetAllWalletsRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[49]
+	mi := &file_messages_proto_msgTypes[50]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3614,7 +3666,7 @@ func (x *GetAllWalletsRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetAllWalletsRequest.ProtoReflect.Descriptor instead.
 func (*GetAllWalletsRequest) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{49}
+	return file_messages_proto_rawDescGZIP(), []int{50}
 }
 
 type GetAllWalletsResponse struct {
@@ -3627,7 +3679,7 @@ type GetAllWalletsResponse struct {
 
 func (x *GetAllWalletsResponse) Reset() {
 	*x = GetAllWalletsResponse{}
-	mi := &file_messages_proto_msgTypes[50]
+	mi := &file_messages_proto_msgTypes[51]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -3639,7 +3691,7 @@ func (x *GetAllWalletsResponse) String() string {
 func (*GetAllWalletsResponse) ProtoMessage() {}
 
 func (x *GetAllWalletsResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[50]
+	mi := &file_messages_proto_msgTypes[51]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3652,7 +3704,7 @@ func (x *GetAllWalletsResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetAllWalletsResponse.ProtoReflect.Descriptor instead.
 func (*GetAllWalletsResponse) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{50}
+	return file_messages_proto_rawDescGZIP(), []int{51}
 }
 
 func (x *GetAllWalletsResponse) GetWalletCount() uint32 {
@@ -3679,7 +3731,7 @@ type GetDepositAddressRequest struct {
 
 func (x *GetDepositAddressRequest) Reset() {
 	*x = GetDepositAddressRequest{}
-	mi := &file_messages_proto_msgTypes[51]
+	mi := &file_messages_proto_msgTypes[52]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -3691,7 +3743,7 @@ func (x *GetDepositAddressRequest) String() string {
 func (*GetDepositAddressRequest) ProtoMessage() {}
 
 func (x *GetDepositAddressRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[51]
+	mi := &file_messages_proto_msgTypes[52]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3704,7 +3756,7 @@ func (x *GetDepositAddressRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetDepositAddressRequest.ProtoReflect.Descriptor instead.
 func (*GetDepositAddressRequest) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{51}
+	return file_messages_proto_rawDescGZIP(), []int{52}
 }
 
 func (x *GetDepositAddressRequest) GetNetworkIdentifier() Network {
@@ -3731,7 +3783,7 @@ type GetDepositAddressResponse struct {
 
 func (x *GetDepositAddressResponse) Reset() {
 	*x = GetDepositAddressResponse{}
-	mi := &file_messages_proto_msgTypes[52]
+	mi := &file_messages_proto_msgTypes[53]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -3743,7 +3795,7 @@ func (x *GetDepositAddressResponse) String() string {
 func (*GetDepositAddressResponse) ProtoMessage() {}
 
 func (x *GetDepositAddressResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[52]
+	mi := &file_messages_proto_msgTypes[53]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3756,7 +3808,7 @@ func (x *GetDepositAddressResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetDepositAddressResponse.ProtoReflect.Descriptor instead.
 func (*GetDepositAddressResponse) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{52}
+	return file_messages_proto_rawDescGZIP(), []int{53}
 }
 
 func (x *GetDepositAddressResponse) GetAddressToIdentifier() *AddressIdentity {
@@ -3785,7 +3837,7 @@ type GetEstimationFeeRequest struct {
 
 func (x *GetEstimationFeeRequest) Reset() {
 	*x = GetEstimationFeeRequest{}
-	mi := &file_messages_proto_msgTypes[53]
+	mi := &file_messages_proto_msgTypes[54]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -3797,7 +3849,7 @@ func (x *GetEstimationFeeRequest) String() string {
 func (*GetEstimationFeeRequest) ProtoMessage() {}
 
 func (x *GetEstimationFeeRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[53]
+	mi := &file_messages_proto_msgTypes[54]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3810,7 +3862,7 @@ func (x *GetEstimationFeeRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetEstimationFeeRequest.ProtoReflect.Descriptor instead.
 func (*GetEstimationFeeRequest) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{53}
+	return file_messages_proto_rawDescGZIP(), []int{54}
 }
 
 func (x *GetEstimationFeeRequest) GetNetworkIdentifier() Network {
@@ -3852,7 +3904,7 @@ type GetEstimationFeeResponse struct {
 
 func (x *GetEstimationFeeResponse) Reset() {
 	*x = GetEstimationFeeResponse{}
-	mi := &file_messages_proto_msgTypes[54]
+	mi := &file_messages_proto_msgTypes[55]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -3864,7 +3916,7 @@ func (x *GetEstimationFeeResponse) String() string {
 func (*GetEstimationFeeResponse) ProtoMessage() {}
 
 func (x *GetEstimationFeeResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[54]
+	mi := &file_messages_proto_msgTypes[55]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3877,7 +3929,7 @@ func (x *GetEstimationFeeResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetEstimationFeeResponse.ProtoReflect.Descriptor instead.
 func (*GetEstimationFeeResponse) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{54}
+	return file_messages_proto_rawDescGZIP(), []int{55}
 }
 
 func (x *GetEstimationFeeResponse) GetNetworkIdentifier() Network {
@@ -3912,7 +3964,7 @@ type GetWalletBalanceRequest struct {
 
 func (x *GetWalletBalanceRequest) Reset() {
 	*x = GetWalletBalanceRequest{}
-	mi := &file_messages_proto_msgTypes[55]
+	mi := &file_messages_proto_msgTypes[56]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -3924,7 +3976,7 @@ func (x *GetWalletBalanceRequest) String() string {
 func (*GetWalletBalanceRequest) ProtoMessage() {}
 
 func (x *GetWalletBalanceRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[55]
+	mi := &file_messages_proto_msgTypes[56]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3937,7 +3989,7 @@ func (x *GetWalletBalanceRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetWalletBalanceRequest.ProtoReflect.Descriptor instead.
 func (*GetWalletBalanceRequest) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{55}
+	return file_messages_proto_rawDescGZIP(), []int{56}
 }
 
 func (x *GetWalletBalanceRequest) GetNetworkIdentifier() Network {
@@ -3972,7 +4024,7 @@ type GetWalletBalanceResponse struct {
 
 func (x *GetWalletBalanceResponse) Reset() {
 	*x = GetWalletBalanceResponse{}
-	mi := &file_messages_proto_msgTypes[56]
+	mi := &file_messages_proto_msgTypes[57]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -3984,7 +4036,7 @@ func (x *GetWalletBalanceResponse) String() string {
 func (*GetWalletBalanceResponse) ProtoMessage() {}
 
 func (x *GetWalletBalanceResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[56]
+	mi := &file_messages_proto_msgTypes[57]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3997,7 +4049,7 @@ func (x *GetWalletBalanceResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetWalletBalanceResponse.ProtoReflect.Descriptor instead.
 func (*GetWalletBalanceResponse) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{56}
+	return file_messages_proto_rawDescGZIP(), []int{57}
 }
 
 func (x *GetWalletBalanceResponse) GetNetworkIdentifier() Network {
@@ -4029,7 +4081,7 @@ type GetTransactionRequest struct {
 
 func (x *GetTransactionRequest) Reset() {
 	*x = GetTransactionRequest{}
-	mi := &file_messages_proto_msgTypes[57]
+	mi := &file_messages_proto_msgTypes[58]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -4041,7 +4093,7 @@ func (x *GetTransactionRequest) String() string {
 func (*GetTransactionRequest) ProtoMessage() {}
 
 func (x *GetTransactionRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[57]
+	mi := &file_messages_proto_msgTypes[58]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4054,7 +4106,7 @@ func (x *GetTransactionRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetTransactionRequest.ProtoReflect.Descriptor instead.
 func (*GetTransactionRequest) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{57}
+	return file_messages_proto_rawDescGZIP(), []int{58}
 }
 
 type GetTransactionResponse struct {
@@ -4065,7 +4117,7 @@ type GetTransactionResponse struct {
 
 func (x *GetTransactionResponse) Reset() {
 	*x = GetTransactionResponse{}
-	mi := &file_messages_proto_msgTypes[58]
+	mi := &file_messages_proto_msgTypes[59]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -4077,7 +4129,7 @@ func (x *GetTransactionResponse) String() string {
 func (*GetTransactionResponse) ProtoMessage() {}
 
 func (x *GetTransactionResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[58]
+	mi := &file_messages_proto_msgTypes[59]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4090,7 +4142,7 @@ func (x *GetTransactionResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetTransactionResponse.ProtoReflect.Descriptor instead.
 func (*GetTransactionResponse) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{58}
+	return file_messages_proto_rawDescGZIP(), []int{59}
 }
 
 type GetWithdrawOrderRequest struct {
@@ -4101,7 +4153,7 @@ type GetWithdrawOrderRequest struct {
 
 func (x *GetWithdrawOrderRequest) Reset() {
 	*x = GetWithdrawOrderRequest{}
-	mi := &file_messages_proto_msgTypes[59]
+	mi := &file_messages_proto_msgTypes[60]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -4113,7 +4165,7 @@ func (x *GetWithdrawOrderRequest) String() string {
 func (*GetWithdrawOrderRequest) ProtoMessage() {}
 
 func (x *GetWithdrawOrderRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[59]
+	mi := &file_messages_proto_msgTypes[60]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4126,7 +4178,7 @@ func (x *GetWithdrawOrderRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetWithdrawOrderRequest.ProtoReflect.Descriptor instead.
 func (*GetWithdrawOrderRequest) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{59}
+	return file_messages_proto_rawDescGZIP(), []int{60}
 }
 
 type GetWithdrawOrderResponse struct {
@@ -4137,7 +4189,7 @@ type GetWithdrawOrderResponse struct {
 
 func (x *GetWithdrawOrderResponse) Reset() {
 	*x = GetWithdrawOrderResponse{}
-	mi := &file_messages_proto_msgTypes[60]
+	mi := &file_messages_proto_msgTypes[61]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -4149,7 +4201,7 @@ func (x *GetWithdrawOrderResponse) String() string {
 func (*GetWithdrawOrderResponse) ProtoMessage() {}
 
 func (x *GetWithdrawOrderResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[60]
+	mi := &file_messages_proto_msgTypes[61]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4162,7 +4214,7 @@ func (x *GetWithdrawOrderResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetWithdrawOrderResponse.ProtoReflect.Descriptor instead.
 func (*GetWithdrawOrderResponse) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{60}
+	return file_messages_proto_rawDescGZIP(), []int{61}
 }
 
 type GetOrderInfoRequest struct {
@@ -4177,7 +4229,7 @@ type GetOrderInfoRequest struct {
 
 func (x *GetOrderInfoRequest) Reset() {
 	*x = GetOrderInfoRequest{}
-	mi := &file_messages_proto_msgTypes[61]
+	mi := &file_messages_proto_msgTypes[62]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -4189,7 +4241,7 @@ func (x *GetOrderInfoRequest) String() string {
 func (*GetOrderInfoRequest) ProtoMessage() {}
 
 func (x *GetOrderInfoRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[61]
+	mi := &file_messages_proto_msgTypes[62]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4202,7 +4254,7 @@ func (x *GetOrderInfoRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetOrderInfoRequest.ProtoReflect.Descriptor instead.
 func (*GetOrderInfoRequest) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{61}
+	return file_messages_proto_rawDescGZIP(), []int{62}
 }
 
 func (x *GetOrderInfoRequest) GetNetworkIdentifier() Network {
@@ -4242,7 +4294,7 @@ type GetOrderInfoResponse struct {
 
 func (x *GetOrderInfoResponse) Reset() {
 	*x = GetOrderInfoResponse{}
-	mi := &file_messages_proto_msgTypes[62]
+	mi := &file_messages_proto_msgTypes[63]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -4254,7 +4306,7 @@ func (x *GetOrderInfoResponse) String() string {
 func (*GetOrderInfoResponse) ProtoMessage() {}
 
 func (x *GetOrderInfoResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[62]
+	mi := &file_messages_proto_msgTypes[63]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4267,7 +4319,7 @@ func (x *GetOrderInfoResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetOrderInfoResponse.ProtoReflect.Descriptor instead.
 func (*GetOrderInfoResponse) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{62}
+	return file_messages_proto_rawDescGZIP(), []int{63}
 }
 
 func (x *GetOrderInfoResponse) GetOrderInfo() *OrderInfo {
@@ -4290,7 +4342,7 @@ type GetOrderListByLimitAndOffsetRequest struct {
 
 func (x *GetOrderListByLimitAndOffsetRequest) Reset() {
 	*x = GetOrderListByLimitAndOffsetRequest{}
-	mi := &file_messages_proto_msgTypes[63]
+	mi := &file_messages_proto_msgTypes[64]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -4302,7 +4354,7 @@ func (x *GetOrderListByLimitAndOffsetRequest) String() string {
 func (*GetOrderListByLimitAndOffsetRequest) ProtoMessage() {}
 
 func (x *GetOrderListByLimitAndOffsetRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[63]
+	mi := &file_messages_proto_msgTypes[64]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4315,7 +4367,7 @@ func (x *GetOrderListByLimitAndOffsetRequest) ProtoReflect() protoreflect.Messag
 
 // Deprecated: Use GetOrderListByLimitAndOffsetRequest.ProtoReflect.Descriptor instead.
 func (*GetOrderListByLimitAndOffsetRequest) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{63}
+	return file_messages_proto_rawDescGZIP(), []int{64}
 }
 
 func (x *GetOrderListByLimitAndOffsetRequest) GetNetworkIdentifier() Network {
@@ -4363,7 +4415,7 @@ type GetOrderListByLimitAndOffsetResponse struct {
 
 func (x *GetOrderListByLimitAndOffsetResponse) Reset() {
 	*x = GetOrderListByLimitAndOffsetResponse{}
-	mi := &file_messages_proto_msgTypes[64]
+	mi := &file_messages_proto_msgTypes[65]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -4375,7 +4427,7 @@ func (x *GetOrderListByLimitAndOffsetResponse) String() string {
 func (*GetOrderListByLimitAndOffsetResponse) ProtoMessage() {}
 
 func (x *GetOrderListByLimitAndOffsetResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[64]
+	mi := &file_messages_proto_msgTypes[65]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4388,7 +4440,7 @@ func (x *GetOrderListByLimitAndOffsetResponse) ProtoReflect() protoreflect.Messa
 
 // Deprecated: Use GetOrderListByLimitAndOffsetResponse.ProtoReflect.Descriptor instead.
 func (*GetOrderListByLimitAndOffsetResponse) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{64}
+	return file_messages_proto_rawDescGZIP(), []int{65}
 }
 
 func (x *GetOrderListByLimitAndOffsetResponse) GetOrdersCount() uint32 {
@@ -4415,7 +4467,7 @@ type GetOrderListByTimeRangeRequest struct {
 
 func (x *GetOrderListByTimeRangeRequest) Reset() {
 	*x = GetOrderListByTimeRangeRequest{}
-	mi := &file_messages_proto_msgTypes[65]
+	mi := &file_messages_proto_msgTypes[66]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -4427,7 +4479,7 @@ func (x *GetOrderListByTimeRangeRequest) String() string {
 func (*GetOrderListByTimeRangeRequest) ProtoMessage() {}
 
 func (x *GetOrderListByTimeRangeRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[65]
+	mi := &file_messages_proto_msgTypes[66]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4440,7 +4492,7 @@ func (x *GetOrderListByTimeRangeRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetOrderListByTimeRangeRequest.ProtoReflect.Descriptor instead.
 func (*GetOrderListByTimeRangeRequest) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{65}
+	return file_messages_proto_rawDescGZIP(), []int{66}
 }
 
 func (x *GetOrderListByTimeRangeRequest) GetTimeRange() *TimeRangeRequest {
@@ -4467,7 +4519,7 @@ type GetOrderListByTimeRangeResponse struct {
 
 func (x *GetOrderListByTimeRangeResponse) Reset() {
 	*x = GetOrderListByTimeRangeResponse{}
-	mi := &file_messages_proto_msgTypes[66]
+	mi := &file_messages_proto_msgTypes[67]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -4479,7 +4531,7 @@ func (x *GetOrderListByTimeRangeResponse) String() string {
 func (*GetOrderListByTimeRangeResponse) ProtoMessage() {}
 
 func (x *GetOrderListByTimeRangeResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[66]
+	mi := &file_messages_proto_msgTypes[67]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4492,7 +4544,7 @@ func (x *GetOrderListByTimeRangeResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetOrderListByTimeRangeResponse.ProtoReflect.Descriptor instead.
 func (*GetOrderListByTimeRangeResponse) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{66}
+	return file_messages_proto_rawDescGZIP(), []int{67}
 }
 
 func (x *GetOrderListByTimeRangeResponse) GetOrdersCount() uint32 {
@@ -4521,7 +4573,7 @@ type GetEventListRequest struct {
 
 func (x *GetEventListRequest) Reset() {
 	*x = GetEventListRequest{}
-	mi := &file_messages_proto_msgTypes[67]
+	mi := &file_messages_proto_msgTypes[68]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -4533,7 +4585,7 @@ func (x *GetEventListRequest) String() string {
 func (*GetEventListRequest) ProtoMessage() {}
 
 func (x *GetEventListRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[67]
+	mi := &file_messages_proto_msgTypes[68]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4546,7 +4598,7 @@ func (x *GetEventListRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetEventListRequest.ProtoReflect.Descriptor instead.
 func (*GetEventListRequest) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{67}
+	return file_messages_proto_rawDescGZIP(), []int{68}
 }
 
 func (x *GetEventListRequest) GetNetworkIdentifier() Network {
@@ -4587,7 +4639,7 @@ type GetEventListResponse struct {
 
 func (x *GetEventListResponse) Reset() {
 	*x = GetEventListResponse{}
-	mi := &file_messages_proto_msgTypes[68]
+	mi := &file_messages_proto_msgTypes[69]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -4599,7 +4651,7 @@ func (x *GetEventListResponse) String() string {
 func (*GetEventListResponse) ProtoMessage() {}
 
 func (x *GetEventListResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[68]
+	mi := &file_messages_proto_msgTypes[69]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4612,7 +4664,7 @@ func (x *GetEventListResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetEventListResponse.ProtoReflect.Descriptor instead.
 func (*GetEventListResponse) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{68}
+	return file_messages_proto_rawDescGZIP(), []int{69}
 }
 
 func (x *GetEventListResponse) GetEventsCount() uint32 {
@@ -4654,7 +4706,9 @@ const file_messages_proto_rawDesc = "" +
 	"\aAddress\x18\x01 \x01(\tR\aAddress\"6\n" +
 	"\fBcTxIdentity\x12\x12\n" +
 	"\x04TxID\x18\x01 \x01(\tR\x04TxID\x12\x12\n" +
-	"\x04Meta\x18\x02 \x01(\fR\x04Meta\"~\n" +
+	"\x04Meta\x18\x02 \x01(\fR\x04Meta\".\n" +
+	"\x18BlockchainWalletIdentity\x12\x12\n" +
+	"\x04UUID\x18\x01 \x01(\tR\x04UUID\"~\n" +
 	"\x18CurrencyIdentityResponse\x12\x12\n" +
 	"\x04UUID\x18\x01 \x01(\tR\x04UUID\x12\x16\n" +
 	"\x06Symbol\x18\x02 \x01(\tR\x06Symbol\x12\x1a\n" +
@@ -4823,7 +4877,7 @@ const file_messages_proto_rawDesc = "" +
 	"\x16CreateCurrencyResponse\x12:\n" +
 	"\x11NetworkIdentifier\x18\x01 \x01(\x0e2\f.api.NetworkR\x11NetworkIdentifier\x12=\n" +
 	"\x12ProviderIdentifier\x18\x02 \x01(\x0e2\r.api.ProviderR\x12ProviderIdentifier\x125\n" +
-	"\fCurrencyInfo\x18\x03 \x01(\v2\x11.api.CurrencyInfoR\fCurrencyInfo\"\xdd\x03\n" +
+	"\fCurrencyInfo\x18\x03 \x01(\v2\x11.api.CurrencyInfoR\fCurrencyInfo\"\xbc\x04\n" +
 	"\x1aCreateWithdrawOrderRequest\x12:\n" +
 	"\x11NetworkIdentifier\x18\x01 \x01(\x0e2\f.api.NetworkR\x11NetworkIdentifier\x12E\n" +
 	"\x12CurrencyIdentifier\x18\x02 \x01(\v2\x15.api.CurrencyIdentityR\x12CurrencyIdentifier\x12P\n" +
@@ -4832,7 +4886,8 @@ const file_messages_proto_rawDesc = "" +
 	"\x17ExternalOrderIdentifier\x18\x05 \x01(\tR\x17ExternalOrderIdentifier\x12\x16\n" +
 	"\x06Amount\x18\x06 \x01(\x04R\x06Amount\x12.\n" +
 	"\x12ConfirmationsCount\x18\a \x01(\rR\x12ConfirmationsCount\x12 \n" +
-	"\vCallbackURL\x18\b \x01(\tR\vCallbackURL\"[\n" +
+	"\vCallbackURL\x18\b \x01(\tR\vCallbackURL\x12]\n" +
+	"\x1aBlockchainWalletIdentifier\x18\t \x01(\v2\x1d.api.BlockchainWalletIdentityR\x1aBlockchainWalletIdentifier\"[\n" +
 	"\x1bCreateWithdrawOrderResponse\x12<\n" +
 	"\x0fOrderIdentifier\x18\x01 \x01(\v2\x12.api.OrderIdentifyR\x0fOrderIdentifier\"\x9d\x02\n" +
 	"\x19AddAccountCurrencyRequest\x12:\n" +
@@ -5000,7 +5055,7 @@ func file_messages_proto_rawDescGZIP() []byte {
 }
 
 var file_messages_proto_enumTypes = make([]protoimpl.EnumInfo, 10)
-var file_messages_proto_msgTypes = make([]protoimpl.MessageInfo, 70)
+var file_messages_proto_msgTypes = make([]protoimpl.MessageInfo, 71)
 var file_messages_proto_goTypes = []any{
 	(Network)(0),                                 // 0: api.Network
 	(Provider)(0),                                // 1: api.Provider
@@ -5022,66 +5077,67 @@ var file_messages_proto_goTypes = []any{
 	(*EstimationFeeIdentify)(nil),                // 17: api.EstimationFeeIdentify
 	(*AddressIdentity)(nil),                      // 18: api.AddressIdentity
 	(*BcTxIdentity)(nil),                         // 19: api.BcTxIdentity
-	(*CurrencyIdentityResponse)(nil),             // 20: api.CurrencyIdentityResponse
-	(*OrderIdentityResponse)(nil),                // 21: api.OrderIdentityResponse
-	(*AccountData)(nil),                          // 22: api.AccountData
-	(*WalletData)(nil),                           // 23: api.WalletData
-	(*CurrencyData)(nil),                         // 24: api.CurrencyData
-	(*TokenData)(nil),                            // 25: api.TokenData
-	(*EstimatedTime)(nil),                        // 26: api.EstimatedTime
-	(*Currency)(nil),                             // 27: api.Currency
-	(*Amount)(nil),                               // 28: api.Amount
-	(*TimeRangeRequest)(nil),                     // 29: api.TimeRangeRequest
-	(*BcTxOperation)(nil),                        // 30: api.BcTxOperation
-	(*OperationsList)(nil),                       // 31: api.OperationsList
-	(*AccountInfo)(nil),                          // 32: api.AccountInfo
-	(*CurrencyInfo)(nil),                         // 33: api.CurrencyInfo
-	(*FeeInfo)(nil),                              // 34: api.FeeInfo
-	(*WalletInfo)(nil),                           // 35: api.WalletInfo
-	(*BcTxInfo)(nil),                             // 36: api.BcTxInfo
-	(*OrderInfo)(nil),                            // 37: api.OrderInfo
-	(*EventInformation)(nil),                     // 38: api.EventInformation
-	(*CreateMerchantRequest)(nil),                // 39: api.CreateMerchantRequest
-	(*CreateMerchantResponse)(nil),               // 40: api.CreateMerchantResponse
-	(*CreateWalletRequest)(nil),                  // 41: api.CreateWalletRequest
-	(*CreateWalletResponse)(nil),                 // 42: api.CreateWalletResponse
-	(*ChangeWalletStatusRequest)(nil),            // 43: api.ChangeWalletStatusRequest
-	(*ChangeWalletStatusResponse)(nil),           // 44: api.ChangeWalletStatusResponse
-	(*ChangeAccountStatusRequest)(nil),           // 45: api.ChangeAccountStatusRequest
-	(*ChangeAccountStatusResponse)(nil),          // 46: api.ChangeAccountStatusResponse
-	(*CreateAccountRequest)(nil),                 // 47: api.CreateAccountRequest
-	(*CreateAccountResponse)(nil),                // 48: api.CreateAccountResponse
-	(*CreateCurrencyRequest)(nil),                // 49: api.CreateCurrencyRequest
-	(*CreateCurrencyResponse)(nil),               // 50: api.CreateCurrencyResponse
-	(*CreateWithdrawOrderRequest)(nil),           // 51: api.CreateWithdrawOrderRequest
-	(*CreateWithdrawOrderResponse)(nil),          // 52: api.CreateWithdrawOrderResponse
-	(*AddAccountCurrencyRequest)(nil),            // 53: api.AddAccountCurrencyRequest
-	(*AddAccountCurrencyResponse)(nil),           // 54: api.AddAccountCurrencyResponse
-	(*GetWalletsRequest)(nil),                    // 55: api.GetWalletsRequest
-	(*GetWalletsResponse)(nil),                   // 56: api.GetWalletsResponse
-	(*GetCurrenciesRequest)(nil),                 // 57: api.GetCurrenciesRequest
-	(*GetCurrenciesResponse)(nil),                // 58: api.GetCurrenciesResponse
-	(*GetAllWalletsRequest)(nil),                 // 59: api.GetAllWalletsRequest
-	(*GetAllWalletsResponse)(nil),                // 60: api.GetAllWalletsResponse
-	(*GetDepositAddressRequest)(nil),             // 61: api.GetDepositAddressRequest
-	(*GetDepositAddressResponse)(nil),            // 62: api.GetDepositAddressResponse
-	(*GetEstimationFeeRequest)(nil),              // 63: api.GetEstimationFeeRequest
-	(*GetEstimationFeeResponse)(nil),             // 64: api.GetEstimationFeeResponse
-	(*GetWalletBalanceRequest)(nil),              // 65: api.GetWalletBalanceRequest
-	(*GetWalletBalanceResponse)(nil),             // 66: api.GetWalletBalanceResponse
-	(*GetTransactionRequest)(nil),                // 67: api.GetTransactionRequest
-	(*GetTransactionResponse)(nil),               // 68: api.GetTransactionResponse
-	(*GetWithdrawOrderRequest)(nil),              // 69: api.GetWithdrawOrderRequest
-	(*GetWithdrawOrderResponse)(nil),             // 70: api.GetWithdrawOrderResponse
-	(*GetOrderInfoRequest)(nil),                  // 71: api.GetOrderInfoRequest
-	(*GetOrderInfoResponse)(nil),                 // 72: api.GetOrderInfoResponse
-	(*GetOrderListByLimitAndOffsetRequest)(nil),  // 73: api.GetOrderListByLimitAndOffsetRequest
-	(*GetOrderListByLimitAndOffsetResponse)(nil), // 74: api.GetOrderListByLimitAndOffsetResponse
-	(*GetOrderListByTimeRangeRequest)(nil),       // 75: api.GetOrderListByTimeRangeRequest
-	(*GetOrderListByTimeRangeResponse)(nil),      // 76: api.GetOrderListByTimeRangeResponse
-	(*GetEventListRequest)(nil),                  // 77: api.GetEventListRequest
-	(*GetEventListResponse)(nil),                 // 78: api.GetEventListResponse
-	nil,                                          // 79: api.BcTxInfo.OperationsEntry
+	(*BlockchainWalletIdentity)(nil),             // 20: api.BlockchainWalletIdentity
+	(*CurrencyIdentityResponse)(nil),             // 21: api.CurrencyIdentityResponse
+	(*OrderIdentityResponse)(nil),                // 22: api.OrderIdentityResponse
+	(*AccountData)(nil),                          // 23: api.AccountData
+	(*WalletData)(nil),                           // 24: api.WalletData
+	(*CurrencyData)(nil),                         // 25: api.CurrencyData
+	(*TokenData)(nil),                            // 26: api.TokenData
+	(*EstimatedTime)(nil),                        // 27: api.EstimatedTime
+	(*Currency)(nil),                             // 28: api.Currency
+	(*Amount)(nil),                               // 29: api.Amount
+	(*TimeRangeRequest)(nil),                     // 30: api.TimeRangeRequest
+	(*BcTxOperation)(nil),                        // 31: api.BcTxOperation
+	(*OperationsList)(nil),                       // 32: api.OperationsList
+	(*AccountInfo)(nil),                          // 33: api.AccountInfo
+	(*CurrencyInfo)(nil),                         // 34: api.CurrencyInfo
+	(*FeeInfo)(nil),                              // 35: api.FeeInfo
+	(*WalletInfo)(nil),                           // 36: api.WalletInfo
+	(*BcTxInfo)(nil),                             // 37: api.BcTxInfo
+	(*OrderInfo)(nil),                            // 38: api.OrderInfo
+	(*EventInformation)(nil),                     // 39: api.EventInformation
+	(*CreateMerchantRequest)(nil),                // 40: api.CreateMerchantRequest
+	(*CreateMerchantResponse)(nil),               // 41: api.CreateMerchantResponse
+	(*CreateWalletRequest)(nil),                  // 42: api.CreateWalletRequest
+	(*CreateWalletResponse)(nil),                 // 43: api.CreateWalletResponse
+	(*ChangeWalletStatusRequest)(nil),            // 44: api.ChangeWalletStatusRequest
+	(*ChangeWalletStatusResponse)(nil),           // 45: api.ChangeWalletStatusResponse
+	(*ChangeAccountStatusRequest)(nil),           // 46: api.ChangeAccountStatusRequest
+	(*ChangeAccountStatusResponse)(nil),          // 47: api.ChangeAccountStatusResponse
+	(*CreateAccountRequest)(nil),                 // 48: api.CreateAccountRequest
+	(*CreateAccountResponse)(nil),                // 49: api.CreateAccountResponse
+	(*CreateCurrencyRequest)(nil),                // 50: api.CreateCurrencyRequest
+	(*CreateCurrencyResponse)(nil),               // 51: api.CreateCurrencyResponse
+	(*CreateWithdrawOrderRequest)(nil),           // 52: api.CreateWithdrawOrderRequest
+	(*CreateWithdrawOrderResponse)(nil),          // 53: api.CreateWithdrawOrderResponse
+	(*AddAccountCurrencyRequest)(nil),            // 54: api.AddAccountCurrencyRequest
+	(*AddAccountCurrencyResponse)(nil),           // 55: api.AddAccountCurrencyResponse
+	(*GetWalletsRequest)(nil),                    // 56: api.GetWalletsRequest
+	(*GetWalletsResponse)(nil),                   // 57: api.GetWalletsResponse
+	(*GetCurrenciesRequest)(nil),                 // 58: api.GetCurrenciesRequest
+	(*GetCurrenciesResponse)(nil),                // 59: api.GetCurrenciesResponse
+	(*GetAllWalletsRequest)(nil),                 // 60: api.GetAllWalletsRequest
+	(*GetAllWalletsResponse)(nil),                // 61: api.GetAllWalletsResponse
+	(*GetDepositAddressRequest)(nil),             // 62: api.GetDepositAddressRequest
+	(*GetDepositAddressResponse)(nil),            // 63: api.GetDepositAddressResponse
+	(*GetEstimationFeeRequest)(nil),              // 64: api.GetEstimationFeeRequest
+	(*GetEstimationFeeResponse)(nil),             // 65: api.GetEstimationFeeResponse
+	(*GetWalletBalanceRequest)(nil),              // 66: api.GetWalletBalanceRequest
+	(*GetWalletBalanceResponse)(nil),             // 67: api.GetWalletBalanceResponse
+	(*GetTransactionRequest)(nil),                // 68: api.GetTransactionRequest
+	(*GetTransactionResponse)(nil),               // 69: api.GetTransactionResponse
+	(*GetWithdrawOrderRequest)(nil),              // 70: api.GetWithdrawOrderRequest
+	(*GetWithdrawOrderResponse)(nil),             // 71: api.GetWithdrawOrderResponse
+	(*GetOrderInfoRequest)(nil),                  // 72: api.GetOrderInfoRequest
+	(*GetOrderInfoResponse)(nil),                 // 73: api.GetOrderInfoResponse
+	(*GetOrderListByLimitAndOffsetRequest)(nil),  // 74: api.GetOrderListByLimitAndOffsetRequest
+	(*GetOrderListByLimitAndOffsetResponse)(nil), // 75: api.GetOrderListByLimitAndOffsetResponse
+	(*GetOrderListByTimeRangeRequest)(nil),       // 76: api.GetOrderListByTimeRangeRequest
+	(*GetOrderListByTimeRangeResponse)(nil),      // 77: api.GetOrderListByTimeRangeResponse
+	(*GetEventListRequest)(nil),                  // 78: api.GetEventListRequest
+	(*GetEventListResponse)(nil),                 // 79: api.GetEventListResponse
+	nil,                                          // 80: api.BcTxInfo.OperationsEntry
 }
 var file_messages_proto_depIdxs = []int32{
 	0,   // 0: api.AccountData.NetworkIdentifier:type_name -> api.Network
@@ -5096,26 +5152,26 @@ var file_messages_proto_depIdxs = []int32{
 	1,   // 9: api.CurrencyData.ProviderIdentifier:type_name -> api.Provider
 	0,   // 10: api.TokenData.NetworkIdentifier:type_name -> api.Network
 	1,   // 11: api.TokenData.ProviderIdentifier:type_name -> api.Provider
-	27,  // 12: api.Amount.Currency:type_name -> api.Currency
+	28,  // 12: api.Amount.Currency:type_name -> api.Currency
 	12,  // 13: api.BcTxOperation.CurrencyIdentifier:type_name -> api.CurrencyIdentity
-	30,  // 14: api.OperationsList.Operations:type_name -> api.BcTxOperation
+	31,  // 14: api.OperationsList.Operations:type_name -> api.BcTxOperation
 	10,  // 15: api.AccountInfo.AccountIdentity:type_name -> api.AccountIdentity
-	22,  // 16: api.AccountInfo.AccountData:type_name -> api.AccountData
-	33,  // 17: api.AccountInfo.CurrencyInfoList:type_name -> api.CurrencyInfo
+	23,  // 16: api.AccountInfo.AccountData:type_name -> api.AccountData
+	34,  // 17: api.AccountInfo.CurrencyInfoList:type_name -> api.CurrencyInfo
 	12,  // 18: api.CurrencyInfo.CurrencyIdentity:type_name -> api.CurrencyIdentity
-	24,  // 19: api.CurrencyInfo.CurrencyData:type_name -> api.CurrencyData
-	25,  // 20: api.CurrencyInfo.TokenData:type_name -> api.TokenData
+	25,  // 19: api.CurrencyInfo.CurrencyData:type_name -> api.CurrencyData
+	26,  // 20: api.CurrencyInfo.TokenData:type_name -> api.TokenData
 	12,  // 21: api.FeeInfo.CurrencyIdentifier:type_name -> api.CurrencyIdentity
 	2,   // 22: api.FeeInfo.FeeLevel:type_name -> api.FeeLevel
-	26,  // 23: api.FeeInfo.ExpirationTime:type_name -> api.EstimatedTime
+	27,  // 23: api.FeeInfo.ExpirationTime:type_name -> api.EstimatedTime
 	11,  // 24: api.WalletInfo.WalletIdentity:type_name -> api.WalletIdentity
-	23,  // 25: api.WalletInfo.WalletData:type_name -> api.WalletData
-	32,  // 26: api.WalletInfo.AccountInfoList:type_name -> api.AccountInfo
+	24,  // 25: api.WalletInfo.WalletData:type_name -> api.WalletData
+	33,  // 26: api.WalletInfo.AccountInfoList:type_name -> api.AccountInfo
 	0,   // 27: api.BcTxInfo.Network:type_name -> api.Network
 	1,   // 28: api.BcTxInfo.Provider:type_name -> api.Provider
 	19,  // 29: api.BcTxInfo.BcTxIdentifier:type_name -> api.BcTxIdentity
 	9,   // 30: api.BcTxInfo.Status:type_name -> api.BcTxStatus
-	79,  // 31: api.BcTxInfo.Operations:type_name -> api.BcTxInfo.OperationsEntry
+	80,  // 31: api.BcTxInfo.Operations:type_name -> api.BcTxInfo.OperationsEntry
 	0,   // 32: api.OrderInfo.Network:type_name -> api.Network
 	1,   // 33: api.OrderInfo.Provider:type_name -> api.Provider
 	11,  // 34: api.OrderInfo.WalletIdentifier:type_name -> api.WalletIdentity
@@ -5123,11 +5179,11 @@ var file_messages_proto_depIdxs = []int32{
 	13,  // 36: api.OrderInfo.MerchantIdentifier:type_name -> api.MerchantIdentity
 	18,  // 37: api.OrderInfo.AddressIdentifier:type_name -> api.AddressIdentity
 	17,  // 38: api.OrderInfo.EstimationFeeIdentifier:type_name -> api.EstimationFeeIdentify
-	20,  // 39: api.OrderInfo.CurrencyIdentifier:type_name -> api.CurrencyIdentityResponse
-	21,  // 40: api.OrderInfo.OrderIdentifier:type_name -> api.OrderIdentityResponse
+	21,  // 39: api.OrderInfo.CurrencyIdentifier:type_name -> api.CurrencyIdentityResponse
+	22,  // 40: api.OrderInfo.OrderIdentifier:type_name -> api.OrderIdentityResponse
 	7,   // 41: api.OrderInfo.Type:type_name -> api.OrderType
 	8,   // 42: api.OrderInfo.Status:type_name -> api.OrderStatus
-	36,  // 43: api.OrderInfo.BcTxList:type_name -> api.BcTxInfo
+	37,  // 43: api.OrderInfo.BcTxList:type_name -> api.BcTxInfo
 	0,   // 44: api.EventInformation.Network:type_name -> api.Network
 	1,   // 45: api.EventInformation.Provider:type_name -> api.Provider
 	13,  // 46: api.EventInformation.MerchantIdentifier:type_name -> api.MerchantIdentity
@@ -5139,9 +5195,9 @@ var file_messages_proto_depIdxs = []int32{
 	12,  // 52: api.CreateWalletRequest.CurrencyIdentifier:type_name -> api.CurrencyIdentity
 	0,   // 53: api.CreateWalletResponse.NetworkIdentifier:type_name -> api.Network
 	1,   // 54: api.CreateWalletResponse.ProviderIdentifier:type_name -> api.Provider
-	35,  // 55: api.CreateWalletResponse.WalletInfo:type_name -> api.WalletInfo
-	32,  // 56: api.CreateWalletResponse.AccountInfo:type_name -> api.AccountInfo
-	33,  // 57: api.CreateWalletResponse.CurrencyInfoList:type_name -> api.CurrencyInfo
+	36,  // 55: api.CreateWalletResponse.WalletInfo:type_name -> api.WalletInfo
+	33,  // 56: api.CreateWalletResponse.AccountInfo:type_name -> api.AccountInfo
+	34,  // 57: api.CreateWalletResponse.CurrencyInfoList:type_name -> api.CurrencyInfo
 	11,  // 58: api.ChangeWalletStatusRequest.WalletIdentifier:type_name -> api.WalletIdentity
 	6,   // 59: api.ChangeWalletStatusRequest.WalletStatus:type_name -> api.WalletStatus
 	11,  // 60: api.ChangeWalletStatusResponse.WalletIdentifier:type_name -> api.WalletIdentity
@@ -5154,65 +5210,66 @@ var file_messages_proto_depIdxs = []int32{
 	1,   // 67: api.CreateCurrencyRequest.ProviderIdentifier:type_name -> api.Provider
 	0,   // 68: api.CreateCurrencyResponse.NetworkIdentifier:type_name -> api.Network
 	1,   // 69: api.CreateCurrencyResponse.ProviderIdentifier:type_name -> api.Provider
-	33,  // 70: api.CreateCurrencyResponse.CurrencyInfo:type_name -> api.CurrencyInfo
+	34,  // 70: api.CreateCurrencyResponse.CurrencyInfo:type_name -> api.CurrencyInfo
 	0,   // 71: api.CreateWithdrawOrderRequest.NetworkIdentifier:type_name -> api.Network
 	12,  // 72: api.CreateWithdrawOrderRequest.CurrencyIdentifier:type_name -> api.CurrencyIdentity
 	14,  // 73: api.CreateWithdrawOrderRequest.EstimateFeeIdentifier:type_name -> api.EstimationFeeIdentity
 	18,  // 74: api.CreateWithdrawOrderRequest.AddressToIdentifier:type_name -> api.AddressIdentity
-	15,  // 75: api.CreateWithdrawOrderResponse.OrderIdentifier:type_name -> api.OrderIdentify
-	0,   // 76: api.AddAccountCurrencyRequest.NetworkIdentifier:type_name -> api.Network
-	1,   // 77: api.AddAccountCurrencyRequest.ProviderIdentifier:type_name -> api.Provider
-	10,  // 78: api.AddAccountCurrencyRequest.AccountIdentity:type_name -> api.AccountIdentity
-	12,  // 79: api.AddAccountCurrencyRequest.CurrencyIdentifier:type_name -> api.CurrencyIdentity
-	0,   // 80: api.AddAccountCurrencyResponse.NetworkIdentifier:type_name -> api.Network
-	1,   // 81: api.AddAccountCurrencyResponse.ProviderIdentifier:type_name -> api.Provider
-	32,  // 82: api.AddAccountCurrencyResponse.AccountInfo:type_name -> api.AccountInfo
-	33,  // 83: api.AddAccountCurrencyResponse.CurrencyInfoList:type_name -> api.CurrencyInfo
-	0,   // 84: api.GetWalletsRequest.NetworkIdentifier:type_name -> api.Network
-	1,   // 85: api.GetWalletsRequest.ProviderIdentifier:type_name -> api.Provider
-	13,  // 86: api.GetWalletsRequest.MerchantIdentifier:type_name -> api.MerchantIdentity
-	35,  // 87: api.GetWalletsResponse.WalletInfoList:type_name -> api.WalletInfo
-	33,  // 88: api.GetCurrenciesResponse.CurrencyInfo:type_name -> api.CurrencyInfo
-	35,  // 89: api.GetAllWalletsResponse.WalletInfoList:type_name -> api.WalletInfo
-	0,   // 90: api.GetDepositAddressRequest.NetworkIdentifier:type_name -> api.Network
-	12,  // 91: api.GetDepositAddressRequest.CurrencyIdentifier:type_name -> api.CurrencyIdentity
-	18,  // 92: api.GetDepositAddressResponse.AddressToIdentifier:type_name -> api.AddressIdentity
-	0,   // 93: api.GetDepositAddressResponse.NetworkIdentifier:type_name -> api.Network
-	0,   // 94: api.GetEstimationFeeRequest.NetworkIdentifier:type_name -> api.Network
-	12,  // 95: api.GetEstimationFeeRequest.CurrencyIdentifier:type_name -> api.CurrencyIdentity
-	18,  // 96: api.GetEstimationFeeRequest.AddressToIdentifier:type_name -> api.AddressIdentity
-	0,   // 97: api.GetEstimationFeeResponse.NetworkIdentifier:type_name -> api.Network
-	14,  // 98: api.GetEstimationFeeResponse.EstimationFeeIdentifier:type_name -> api.EstimationFeeIdentity
-	34,  // 99: api.GetEstimationFeeResponse.FeeInfo:type_name -> api.FeeInfo
-	0,   // 100: api.GetWalletBalanceRequest.NetworkIdentifier:type_name -> api.Network
-	12,  // 101: api.GetWalletBalanceRequest.CurrencyIdentifier:type_name -> api.CurrencyIdentity
-	11,  // 102: api.GetWalletBalanceRequest.WalletIdentifier:type_name -> api.WalletIdentity
-	0,   // 103: api.GetWalletBalanceResponse.NetworkIdentifier:type_name -> api.Network
-	18,  // 104: api.GetWalletBalanceResponse.AddressToIdentifier:type_name -> api.AddressIdentity
-	28,  // 105: api.GetWalletBalanceResponse.BalanceInfo:type_name -> api.Amount
-	0,   // 106: api.GetOrderInfoRequest.NetworkIdentifier:type_name -> api.Network
-	1,   // 107: api.GetOrderInfoRequest.ProviderIdentifier:type_name -> api.Provider
-	15,  // 108: api.GetOrderInfoRequest.OrderIdentifier:type_name -> api.OrderIdentify
-	13,  // 109: api.GetOrderInfoRequest.MerchantIdentifier:type_name -> api.MerchantIdentity
-	37,  // 110: api.GetOrderInfoResponse.OrderInfo:type_name -> api.OrderInfo
-	0,   // 111: api.GetOrderListByLimitAndOffsetRequest.NetworkIdentifier:type_name -> api.Network
-	1,   // 112: api.GetOrderListByLimitAndOffsetRequest.ProviderIdentifier:type_name -> api.Provider
-	13,  // 113: api.GetOrderListByLimitAndOffsetRequest.MerchantIdentifier:type_name -> api.MerchantIdentity
-	37,  // 114: api.GetOrderListByLimitAndOffsetResponse.OrderInfoList:type_name -> api.OrderInfo
-	29,  // 115: api.GetOrderListByTimeRangeRequest.TimeRange:type_name -> api.TimeRangeRequest
-	13,  // 116: api.GetOrderListByTimeRangeRequest.MerchantIdentifier:type_name -> api.MerchantIdentity
-	37,  // 117: api.GetOrderListByTimeRangeResponse.OrderInfoList:type_name -> api.OrderInfo
-	0,   // 118: api.GetEventListRequest.NetworkIdentifier:type_name -> api.Network
-	1,   // 119: api.GetEventListRequest.ProviderIdentifier:type_name -> api.Provider
-	15,  // 120: api.GetEventListRequest.OrderIdentifier:type_name -> api.OrderIdentify
-	13,  // 121: api.GetEventListRequest.MerchantIdentifier:type_name -> api.MerchantIdentity
-	38,  // 122: api.GetEventListResponse.EventInfoList:type_name -> api.EventInformation
-	31,  // 123: api.BcTxInfo.OperationsEntry.value:type_name -> api.OperationsList
-	124, // [124:124] is the sub-list for method output_type
-	124, // [124:124] is the sub-list for method input_type
-	124, // [124:124] is the sub-list for extension type_name
-	124, // [124:124] is the sub-list for extension extendee
-	0,   // [0:124] is the sub-list for field type_name
+	20,  // 75: api.CreateWithdrawOrderRequest.BlockchainWalletIdentifier:type_name -> api.BlockchainWalletIdentity
+	15,  // 76: api.CreateWithdrawOrderResponse.OrderIdentifier:type_name -> api.OrderIdentify
+	0,   // 77: api.AddAccountCurrencyRequest.NetworkIdentifier:type_name -> api.Network
+	1,   // 78: api.AddAccountCurrencyRequest.ProviderIdentifier:type_name -> api.Provider
+	10,  // 79: api.AddAccountCurrencyRequest.AccountIdentity:type_name -> api.AccountIdentity
+	12,  // 80: api.AddAccountCurrencyRequest.CurrencyIdentifier:type_name -> api.CurrencyIdentity
+	0,   // 81: api.AddAccountCurrencyResponse.NetworkIdentifier:type_name -> api.Network
+	1,   // 82: api.AddAccountCurrencyResponse.ProviderIdentifier:type_name -> api.Provider
+	33,  // 83: api.AddAccountCurrencyResponse.AccountInfo:type_name -> api.AccountInfo
+	34,  // 84: api.AddAccountCurrencyResponse.CurrencyInfoList:type_name -> api.CurrencyInfo
+	0,   // 85: api.GetWalletsRequest.NetworkIdentifier:type_name -> api.Network
+	1,   // 86: api.GetWalletsRequest.ProviderIdentifier:type_name -> api.Provider
+	13,  // 87: api.GetWalletsRequest.MerchantIdentifier:type_name -> api.MerchantIdentity
+	36,  // 88: api.GetWalletsResponse.WalletInfoList:type_name -> api.WalletInfo
+	34,  // 89: api.GetCurrenciesResponse.CurrencyInfo:type_name -> api.CurrencyInfo
+	36,  // 90: api.GetAllWalletsResponse.WalletInfoList:type_name -> api.WalletInfo
+	0,   // 91: api.GetDepositAddressRequest.NetworkIdentifier:type_name -> api.Network
+	12,  // 92: api.GetDepositAddressRequest.CurrencyIdentifier:type_name -> api.CurrencyIdentity
+	18,  // 93: api.GetDepositAddressResponse.AddressToIdentifier:type_name -> api.AddressIdentity
+	0,   // 94: api.GetDepositAddressResponse.NetworkIdentifier:type_name -> api.Network
+	0,   // 95: api.GetEstimationFeeRequest.NetworkIdentifier:type_name -> api.Network
+	12,  // 96: api.GetEstimationFeeRequest.CurrencyIdentifier:type_name -> api.CurrencyIdentity
+	18,  // 97: api.GetEstimationFeeRequest.AddressToIdentifier:type_name -> api.AddressIdentity
+	0,   // 98: api.GetEstimationFeeResponse.NetworkIdentifier:type_name -> api.Network
+	14,  // 99: api.GetEstimationFeeResponse.EstimationFeeIdentifier:type_name -> api.EstimationFeeIdentity
+	35,  // 100: api.GetEstimationFeeResponse.FeeInfo:type_name -> api.FeeInfo
+	0,   // 101: api.GetWalletBalanceRequest.NetworkIdentifier:type_name -> api.Network
+	12,  // 102: api.GetWalletBalanceRequest.CurrencyIdentifier:type_name -> api.CurrencyIdentity
+	11,  // 103: api.GetWalletBalanceRequest.WalletIdentifier:type_name -> api.WalletIdentity
+	0,   // 104: api.GetWalletBalanceResponse.NetworkIdentifier:type_name -> api.Network
+	18,  // 105: api.GetWalletBalanceResponse.AddressToIdentifier:type_name -> api.AddressIdentity
+	29,  // 106: api.GetWalletBalanceResponse.BalanceInfo:type_name -> api.Amount
+	0,   // 107: api.GetOrderInfoRequest.NetworkIdentifier:type_name -> api.Network
+	1,   // 108: api.GetOrderInfoRequest.ProviderIdentifier:type_name -> api.Provider
+	15,  // 109: api.GetOrderInfoRequest.OrderIdentifier:type_name -> api.OrderIdentify
+	13,  // 110: api.GetOrderInfoRequest.MerchantIdentifier:type_name -> api.MerchantIdentity
+	38,  // 111: api.GetOrderInfoResponse.OrderInfo:type_name -> api.OrderInfo
+	0,   // 112: api.GetOrderListByLimitAndOffsetRequest.NetworkIdentifier:type_name -> api.Network
+	1,   // 113: api.GetOrderListByLimitAndOffsetRequest.ProviderIdentifier:type_name -> api.Provider
+	13,  // 114: api.GetOrderListByLimitAndOffsetRequest.MerchantIdentifier:type_name -> api.MerchantIdentity
+	38,  // 115: api.GetOrderListByLimitAndOffsetResponse.OrderInfoList:type_name -> api.OrderInfo
+	30,  // 116: api.GetOrderListByTimeRangeRequest.TimeRange:type_name -> api.TimeRangeRequest
+	13,  // 117: api.GetOrderListByTimeRangeRequest.MerchantIdentifier:type_name -> api.MerchantIdentity
+	38,  // 118: api.GetOrderListByTimeRangeResponse.OrderInfoList:type_name -> api.OrderInfo
+	0,   // 119: api.GetEventListRequest.NetworkIdentifier:type_name -> api.Network
+	1,   // 120: api.GetEventListRequest.ProviderIdentifier:type_name -> api.Provider
+	15,  // 121: api.GetEventListRequest.OrderIdentifier:type_name -> api.OrderIdentify
+	13,  // 122: api.GetEventListRequest.MerchantIdentifier:type_name -> api.MerchantIdentity
+	39,  // 123: api.GetEventListResponse.EventInfoList:type_name -> api.EventInformation
+	32,  // 124: api.BcTxInfo.OperationsEntry.value:type_name -> api.OperationsList
+	125, // [125:125] is the sub-list for method output_type
+	125, // [125:125] is the sub-list for method input_type
+	125, // [125:125] is the sub-list for extension type_name
+	125, // [125:125] is the sub-list for extension extendee
+	0,   // [0:125] is the sub-list for field type_name
 }
 
 func init() { file_messages_proto_init() }
@@ -5220,20 +5277,20 @@ func file_messages_proto_init() {
 	if File_messages_proto != nil {
 		return
 	}
-	file_messages_proto_msgTypes[23].OneofWrappers = []any{}
-	file_messages_proto_msgTypes[31].OneofWrappers = []any{}
-	file_messages_proto_msgTypes[45].OneofWrappers = []any{}
-	file_messages_proto_msgTypes[61].OneofWrappers = []any{}
-	file_messages_proto_msgTypes[63].OneofWrappers = []any{}
-	file_messages_proto_msgTypes[65].OneofWrappers = []any{}
-	file_messages_proto_msgTypes[67].OneofWrappers = []any{}
+	file_messages_proto_msgTypes[24].OneofWrappers = []any{}
+	file_messages_proto_msgTypes[32].OneofWrappers = []any{}
+	file_messages_proto_msgTypes[46].OneofWrappers = []any{}
+	file_messages_proto_msgTypes[62].OneofWrappers = []any{}
+	file_messages_proto_msgTypes[64].OneofWrappers = []any{}
+	file_messages_proto_msgTypes[66].OneofWrappers = []any{}
+	file_messages_proto_msgTypes[68].OneofWrappers = []any{}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_messages_proto_rawDesc), len(file_messages_proto_rawDesc)),
 			NumEnums:      10,
-			NumMessages:   70,
+			NumMessages:   71,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

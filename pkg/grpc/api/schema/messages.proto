@@ -129,6 +129,10 @@ message BcTxIdentity {
   bytes Meta = 2;
 }
 
+message BlockchainWalletIdentity {
+  string UUID = 1;
+}
+
 
 /*
  * Identity response messages
@@ -364,6 +368,7 @@ message CreateWithdrawOrderRequest {
   uint64 Amount = 6;
   uint32 ConfirmationsCount = 7;
   string CallbackURL = 8;
+  BlockchainWalletIdentity BlockchainWalletIdentifier = 9;
 }
 
 message CreateWithdrawOrderResponse {

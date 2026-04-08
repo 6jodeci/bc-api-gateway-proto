@@ -21,6 +21,7 @@
     - [BcTxInfo](#api-BcTxInfo)
     - [BcTxInfo.OperationsEntry](#api-BcTxInfo-OperationsEntry)
     - [BcTxOperation](#api-BcTxOperation)
+    - [BlockchainWalletIdentity](#api-BlockchainWalletIdentity)
     - [ChangeAccountStatusRequest](#api-ChangeAccountStatusRequest)
     - [ChangeAccountStatusResponse](#api-ChangeAccountStatusResponse)
     - [ChangeWalletStatusRequest](#api-ChangeWalletStatusRequest)
@@ -376,6 +377,21 @@ Operation
 
 
 
+<a name="api-BlockchainWalletIdentity"></a>
+
+### BlockchainWalletIdentity
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| UUID | [string](#string) |  |  |
+
+
+
+
+
+
 <a name="api-ChangeAccountStatusRequest"></a>
 
 ### ChangeAccountStatusRequest
@@ -576,6 +592,7 @@ Messages (requests and responses) for creating
 | Amount | [uint64](#uint64) |  |  |
 | ConfirmationsCount | [uint32](#uint32) |  |  |
 | CallbackURL | [string](#string) |  |  |
+| BlockchainWalletIdentifier | [BlockchainWalletIdentity](#api-BlockchainWalletIdentity) |  |  |
 
 
 
